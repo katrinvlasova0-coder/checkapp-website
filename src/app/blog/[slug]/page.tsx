@@ -6,9 +6,10 @@ import { MdxContent } from '@/components/blog/MdxContent';
 import { TableOfContents } from '@/components/blog/TableOfContents';
 import { ReadingProgress } from '@/components/blog/ReadingProgress';
 import { AuthorBio } from '@/components/blog/AuthorBio';
+import { CtaBanner } from '@/components/marketing/CtaBanner';
 import { RelatedPosts } from '@/components/blog/RelatedPosts';
 import { FaqAccordion } from '@/components/ui/FaqAccordion';
-import { CtaBanner } from '@/components/marketing/CtaBanner';
+import { BlogInlineCta } from '@/components/blog/BlogInlineCta';
 import { getAllPostSlugs, getPostBySlug, getRelatedPosts, extractHeadings } from '@/lib/blog';
 import { createMetadata, breadcrumbSchema, articleSchema, faqSchema } from '@/lib/seo';
 
@@ -95,12 +96,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
 
             <div className="my-12">
-              <CtaBanner
-                headline="Track your hydration with DIDI"
-                subheadline="Daily check-ins, tongue scans, and personalized guidance — free to start."
-                page={`blog/${slug}`}
-                position="mid-article"
-              />
+              <BlogInlineCta slug={slug} />
             </div>
 
             {post.sources.length > 0 && (
