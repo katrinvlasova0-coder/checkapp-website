@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         ])}
       />
 
-      <Section variant="light" className="pt-32">
+      <Section variant="light" className="pt-24 md:pt-28">
         <h1 className="font-display text-4xl font-bold">Privacy Policy</h1>
         <p className="mt-2 text-text-secondary">Last updated: June 1, 2026</p>
 

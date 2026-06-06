@@ -1,8 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
+import { SiteImage } from '@/components/ui/SiteImage';
 import { APP_DOWNLOAD_URL } from '@/lib/constants';
 import { ChevronDown, Sparkles, Shield, RefreshCw } from 'lucide-react';
 
@@ -10,10 +10,10 @@ export function HeroHome() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-forest pt-20">
+    <section className="relative min-h-[calc(100dvh-4rem)] overflow-hidden bg-forest pt-16 md:pt-20">
       {/* Background decorative ellipses */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <Image
+        <SiteImage
           src="/assets/splash-ellipse-1.png"
           alt=""
           width={500}
@@ -21,7 +21,7 @@ export function HeroHome() {
           className="absolute -left-24 top-16 opacity-25"
           aria-hidden="true"
         />
-        <Image
+        <SiteImage
           src="/assets/splash-ellipse-2.png"
           alt=""
           width={400}
@@ -29,7 +29,7 @@ export function HeroHome() {
           className="absolute -right-16 bottom-32 opacity-20"
           aria-hidden="true"
         />
-        <Image
+        <SiteImage
           src="/assets/splash-ellipse-3.png"
           alt=""
           width={300}
@@ -39,7 +39,7 @@ export function HeroHome() {
         />
       </div>
 
-      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-8 px-5 pb-8 pt-5 md:flex-row md:items-center md:gap-10 md:px-8 md:pt-8 md:pb-10">
+      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-10 px-5 pb-12 pt-6 md:flex-row md:items-center md:gap-12 md:px-8 md:pb-16 md:pt-10">
 
         {/* Left — copy */}
         <div className="flex-1 text-center md:text-left">
@@ -47,7 +47,7 @@ export function HeroHome() {
             initial={reduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/80 backdrop-blur-sm"
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/80 backdrop-blur-sm"
           >
             <Sparkles size={14} className="text-primary-light" />
             AI-powered wellness companion
@@ -69,7 +69,7 @@ export function HeroHome() {
             initial={reduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 max-w-lg text-base leading-relaxed text-white/70 md:text-lg"
+            className="mt-5 max-w-lg text-base leading-relaxed text-white/70 md:text-lg"
           >
             DIDI asks new questions every morning, requests different selfies, and adapts its
             guidance based on your data. Not a tracker — a real daily conversation about your health.
@@ -80,7 +80,7 @@ export function HeroHome() {
             initial={reduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.28 }}
-            className="mt-4 flex flex-wrap gap-2 justify-center md:justify-start"
+            className="mt-5 flex flex-wrap gap-2 justify-center md:justify-start"
           >
             {[
               { icon: <RefreshCw size={12} />, text: 'Different every day' },
@@ -101,7 +101,7 @@ export function HeroHome() {
             initial={reduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
-            className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start"
+            className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start"
           >
             <Button
               href={APP_DOWNLOAD_URL}
@@ -125,7 +125,7 @@ export function HeroHome() {
             initial={reduceMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:justify-center md:justify-start"
+            className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-center md:justify-start"
           >
             <span className="flex items-center gap-1.5 text-sm text-white/50">
               <Shield size={13} className="text-primary-light" />
@@ -145,7 +145,7 @@ export function HeroHome() {
         >
           {/* DIDI — isolated, no overlapping cards */}
           <div className="relative z-10 flex flex-col items-center">
-            <Image
+            <SiteImage
               src="/assets/didi-body-home.png"
               alt="DIDI — your AI health companion character"
               width={160}
@@ -165,7 +165,7 @@ export function HeroHome() {
             >
               <div className="rounded-[1.5rem] bg-bg-warm p-3">
                 <div className="mb-2 flex items-center gap-2">
-                  <Image
+                  <SiteImage
                     src="/assets/didi-avatar-header.png"
                     alt=""
                     width={24}

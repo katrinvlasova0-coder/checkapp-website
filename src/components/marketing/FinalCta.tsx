@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { SiteImage } from '@/components/ui/SiteImage';
 import { Section } from '@/components/ui/Section';
 import { CtaBanner } from './CtaBanner';
 
@@ -9,8 +9,7 @@ export function FinalCta() {
         <div className="flex-1">
           <CtaBanner page="home" position="final-cta" />
         </div>
-        {/* Didi — static, no animation */}
-        <Image
+        <SiteImage
           src="/assets/didi-home-character.png"
           alt="DIDI the AI health companion"
           width={220}

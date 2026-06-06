@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { SiteImage } from '@/components/ui/SiteImage';
 import { JsonLd } from '@/components/layout/JsonLd';
 import { Section } from '@/components/ui/Section';
 import { CtaBanner } from '@/components/marketing/CtaBanner';
@@ -51,7 +51,7 @@ export default function AboutPage() {
         ])}
       />
 
-      <Section variant="dark" className="pt-32">
+      <Section variant="dark" className="pt-24 md:pt-28">
         <div className="flex flex-col items-center gap-10 md:flex-row">
           <div className="flex-1">
             <h1 className="font-display text-4xl font-bold md:text-5xl">
@@ -63,7 +63,7 @@ export default function AboutPage() {
               into a daily conversation.
             </AnswerBlock>
           </div>
-          <Image
+          <SiteImage
             src="/assets/didi-home-character.png"
             alt="DIDI character illustration representing the CheckApp origin story"
             width={220}

@@ -23,7 +23,7 @@ export default function BlogPage() {
         ])}
       />
 
-      <Section variant="warm" className="pt-32">
+      <Section variant="warm" className="pt-24 md:pt-28">
         <h1 className="font-display text-4xl font-bold md:text-5xl">
           Hydration science, wellness habits, and AI health
         </h1>

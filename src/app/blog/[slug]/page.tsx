@@ -69,7 +69,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         ]}
       />
 
-      <Section variant="warm" className="pt-32">
+      <Section variant="warm" className="pt-24 md:pt-28">
         <div className="grid gap-12 lg:grid-cols-[1fr_240px]">
           <article>
             <Link href="/blog" className="text-sm font-semibold text-primary hover:underline">

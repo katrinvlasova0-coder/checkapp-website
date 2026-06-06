@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import { SiteImage } from '@/components/ui/SiteImage';
 import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants';
 import { ShieldAlert } from 'lucide-react';
 
@@ -24,7 +24,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <div className="flex items-center gap-2.5">
-              <Image
+              <SiteImage
                 src="/assets/didi-avatar-header.png"
                 alt={`${SITE_NAME} logo`}
                 width={36}

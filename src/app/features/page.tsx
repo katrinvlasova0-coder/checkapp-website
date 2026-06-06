@@ -58,7 +58,7 @@ export default function FeaturesPage() {
         ]}
       />
 
-      <Section variant="dark" className="pt-32">
+      <Section variant="dark" className="pt-24 md:pt-28">
         <h1 className="font-display text-4xl font-bold md:text-5xl">
           Everything you need to actually stay healthy.
         </h1>

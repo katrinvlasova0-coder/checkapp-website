@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import { type ReactNode } from 'react';
+import { SiteImage } from '@/components/ui/SiteImage';
 
 type FeatureRowProps = {
   title: string;
@@ -28,7 +28,7 @@ export function ChatBubbleVisual() {
   return (
     <div className="w-full max-w-sm rounded-3xl bg-bg-warm p-5 shadow-lg">
       <div className="mb-3 flex items-center gap-2">
-        <Image src="/assets/didi-avatar-header.png" alt="" width={28} height={28} className="rounded-full" />
+        <SiteImage src="/assets/didi-avatar-header.png" alt="" width={28} height={28} className="rounded-full" />
         <span className="text-sm font-semibold">DIDI</span>
       </div>
       <div className="space-y-3">
@@ -71,7 +71,7 @@ export function StreakVisual() {
   return (
     <div className="w-full max-w-sm rounded-3xl bg-card p-6 shadow-lg">
       <div className="flex items-center gap-3">
-        <Image src="/assets/streak-flame.png" alt="Streak flame" width={40} height={40} />
+        <SiteImage src="/assets/streak-flame.png" alt="Streak flame" width={40} height={40} />
         <div>
           <p className="font-display text-2xl font-bold">12 days</p>
           <p className="text-sm text-text-secondary">Hydration streak</p>
@@ -79,7 +79,7 @@ export function StreakVisual() {
       </div>
       <div className="mt-4 flex gap-2">
         {['done', 'done', 'done', 'today', 'empty', 'empty', 'empty'].map((state, i) => (
-          <Image
+          <SiteImage
             key={i}
             src={`/assets/streak-tick-${state}.png`}
             alt=""
@@ -96,7 +96,7 @@ export function NotificationVisual() {
   return (
     <div className="w-full max-w-sm rounded-2xl bg-card p-4 shadow-lg">
       <div className="flex items-start gap-3">
-        <Image src="/assets/didi-app-icon.png" alt="" width={36} height={36} className="rounded-lg" />
+        <SiteImage src="/assets/didi-app-icon.png" alt="" width={36} height={36} className="rounded-lg" />
         <div>
           <p className="text-xs text-text-secondary">CheckApp · now</p>
           <p className="font-semibold text-text">DIDI</p>

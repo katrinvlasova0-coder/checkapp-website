@@ -1,11 +1,11 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
+import { SiteImage } from '@/components/ui/SiteImage';
 import { NAV_LINKS, SITE_NAME, APP_DOWNLOAD_URL } from '@/lib/constants';
 
 export function Header() {
@@ -38,14 +38,14 @@ export function Header() {
           scrolled || !isHome ? 'bg-forest/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
         }`}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
+        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5 md:h-16 md:px-8">
           <Link href="/" className="flex items-center gap-2.5">
-            <Image
+            <SiteImage
               src="/assets/didi-avatar-header.png"
               alt={`${SITE_NAME} logo — DIDI mascot`}
-              width={40}
-              height={40}
-              className="rounded-full"
+              width={36}
+              height={36}
+              className="rounded-full md:h-10 md:w-10"
             />
             <span className="font-display text-lg font-bold text-white">{SITE_NAME}</span>
           </Link>

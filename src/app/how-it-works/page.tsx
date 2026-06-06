@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { SiteImage } from '@/components/ui/SiteImage';
 import { JsonLd } from '@/components/layout/JsonLd';
 import { Button } from '@/components/ui/Button';
 import { Section } from '@/components/ui/Section';
@@ -140,7 +140,7 @@ export default function HowItWorksPage() {
         ])}
       />
 
-      <Section variant="dark" className="pt-32">
+      <Section variant="dark" className="pt-24 md:pt-28">
         <div className="flex flex-col items-center gap-10 md:flex-row">
           <div className="flex-1">
             <h1 className="font-display text-4xl font-bold md:text-5xl">
@@ -152,7 +152,7 @@ export default function HowItWorksPage() {
               messages with personalised wellness guidance.
             </AnswerBlock>
           </div>
-          <Image
+          <SiteImage
             src="/assets/didi-body-home.png"
             alt="DIDI full body illustration with health thought bubbles"
             width={168}
