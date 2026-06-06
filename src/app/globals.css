@@ -107,3 +107,45 @@ h1, h2, h3, h4 {
   color: var(--color-text);
   font-weight: 600;
 }
+
+.prose-checkapp .prose-table-wrap table {
+  width: 100%;
+  min-width: 28rem;
+  border-collapse: collapse;
+}
+
+.prose-checkapp .prose-table-wrap th,
+.prose-checkapp .prose-table-wrap td {
+  padding: 0.875rem 1.25rem;
+  text-align: left;
+  vertical-align: top;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.prose-checkapp .prose-table-wrap th {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.prose-checkapp .prose-table-wrap td {
+  color: var(--color-text-secondary);
+}
+
+.prose-checkapp .prose-table-wrap tbody tr:last-child td,
+.prose-checkapp .prose-table-wrap tbody tr:last-child th {
+  border-bottom: none;
+}
+
+.prose-checkapp .prose-table-wrap tbody tr:hover {
+  background: rgba(88, 131, 23, 0.04);
+}
+
+.prose-checkapp hr {
+  margin: 2.5rem 0;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
