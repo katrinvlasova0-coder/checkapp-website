@@ -1,0 +1,22 @@
+import Script from 'next/script';
+
+type JsonLdProps = {
+  data: Record<string, unknown> | Record<string, unknown>[];
+};
+
+export function JsonLd({ data }: JsonLdProps) {
+  const schemas = Array.isArray(data) ? data : [data];
+
+  return (
+    <>
+      {schemas.map((schema, index) => (
+        <Script
+          key={index}
+          id={`json-ld-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+    </>
+  );
+}

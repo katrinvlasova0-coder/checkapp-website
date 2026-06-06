@@ -5,11 +5,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
+    "preview": "npx serve out",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "assets:sync": "bash scripts/sync-assets.sh"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "framer-motion": "^12.40.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^1.17.0",
     "next": "16.2.7",
+    "next-mdx-remote": "^6.0.0",
+    "next-sitemap": "^4.2.3",
+    "posthog-js": "^1.381.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
