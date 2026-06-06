@@ -1,4 +1,7 @@
-import { UserCircle, TrendingUp, ShieldCheck, MessageSquareHeart } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, UserCircle, TrendingUp, ShieldCheck, MessageSquareHeart } from 'lucide-react';
+import { BlogRelatedCard } from '@/components/blog/BlogRelatedCard';
+import { getFourPMedicinePosts } from '@/lib/blog';
 
 const PILLARS = [
   {
@@ -52,6 +55,8 @@ const PILLARS = [
 ];
 
 export function FourPMedicine() {
+  const articles = getFourPMedicinePosts(4);
+
   return (
     <section className="bg-forest py-24">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -98,6 +103,34 @@ export function FourPMedicine() {
           4P Medicine framework developed by Leroy Hood, PhD. CheckApp applies these principles for
           consumer wellness guidance only — not for clinical use.
         </p>
+
+        {articles.length > 0 && (
+          <div className="mt-16 border-t border-white/10 pt-12">
+            <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+              <div>
+                <h3 className="font-display text-2xl font-bold text-white md:text-3xl">
+                  Learn more about 4P Medicine
+                </h3>
+                <p className="mt-2 max-w-xl text-white/60">
+                  Deep dives from our blog — personalised, predictive, preventive, and participative
+                  wellness in practice.
+                </p>
+              </div>
+              <Link
+                href="/blog"
+                className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-primary-light hover:underline"
+              >
+                All articles <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              {articles.map((post) => (
+                <BlogRelatedCard key={post.slug} post={post} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

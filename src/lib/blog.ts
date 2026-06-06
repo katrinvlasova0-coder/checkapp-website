@@ -27,6 +27,7 @@ export type BlogPostMeta = {
   dateModified: string;
   author: BlogAuthor;
   category: string;
+  tags: string[];
   readTime: number;
   featured?: boolean;
   coverImage?: string;
@@ -73,6 +74,7 @@ function parsePost(filename: string): BlogPost {
     dateModified,
     author,
     category,
+    tags,
     readTime,
     featured: data.featured as boolean | undefined,
     coverImage: data.coverImage as string | undefined,
@@ -122,6 +124,38 @@ export function getRelatedPosts(slug: string, category: string, limit = 4): Blog
   const others = all.filter((p) => p.category !== category);
 
   return [...sameCategory, ...others].slice(0, limit);
+}
+
+const FOUR_P_MEDICINE_TAGS = new Set([
+  '4p-medicine',
+  'predictive-health',
+  'preventive-health',
+  'preventive-care',
+  'participative-health',
+  'personalisation',
+  'pattern-recognition',
+  'patient-empowerment',
+]);
+
+/** Articles for the homepage 4P Medicine section — prioritises core explainer first. */
+export function getFourPMedicinePosts(limit = 4): BlogPostMeta[] {
+  const all = getAllPosts();
+  const prioritySlug = '4p-medicine-basics';
+
+  const tagged = all.filter((post) =>
+    post.tags.some((tag) => FOUR_P_MEDICINE_TAGS.has(tag.toLowerCase())),
+  );
+
+  const priority = tagged.find((p) => p.slug === prioritySlug);
+  const rest = tagged
+    .filter((p) => p.slug !== prioritySlug)
+    .sort(
+      (a, b) =>
+        new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
+    );
+
+  const ordered = priority ? [priority, ...rest] : rest;
+  return ordered.slice(0, limit);
 }
 
 export function extractHeadings(content: string): { id: string; text: string }[] {
