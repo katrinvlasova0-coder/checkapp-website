@@ -116,10 +116,12 @@ export function getPostBySlug(slug: string): BlogPost | null {
   return parsePost(filename);
 }
 
-export function getRelatedPosts(slug: string, category: string, limit = 3): BlogPostMeta[] {
-  return getAllPosts()
-    .filter((p) => p.slug !== slug && p.category === category)
-    .slice(0, limit);
+export function getRelatedPosts(slug: string, category: string, limit = 4): BlogPostMeta[] {
+  const all = getAllPosts().filter((p) => p.slug !== slug);
+  const sameCategory = all.filter((p) => p.category === category);
+  const others = all.filter((p) => p.category !== category);
+
+  return [...sameCategory, ...others].slice(0, limit);
 }
 
 export function extractHeadings(content: string): { id: string; text: string }[] {

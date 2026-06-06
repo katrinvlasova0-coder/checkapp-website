@@ -41,7 +41,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) notFound();
 
   const headings = extractHeadings(post.content);
-  const related = getRelatedPosts(slug, post.category);
+  const related = getRelatedPosts(slug, post.category, 4);
 
   const formattedDate = new Date(post.dateModified).toLocaleDateString('en-US', {
     month: 'long',
@@ -130,11 +130,11 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
 
             <div className="mt-12">
-              <CtaBanner page={`blog/${slug}`} position="end-article" />
+              <RelatedPosts posts={related} />
             </div>
 
-            <div className="mt-16">
-              <RelatedPosts posts={related} />
+            <div className="mt-12">
+              <CtaBanner page={`blog/${slug}`} position="end-article" />
             </div>
           </article>
 
