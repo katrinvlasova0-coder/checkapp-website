@@ -22,6 +22,9 @@ export const PLAY_STORE_URL: string | null = null;
 /** @deprecated Use APP_DOWNLOAD_URL */
 export const TESTFLIGHT_URL = APP_DOWNLOAD_URL;
 
+/** Deep link used after password-recovery / email confirm. */
+export const APP_SCHEME_CALLBACK = 'checkapp://auth/callback';
+
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://checkapp.today';
 
 export const SITE_NAME = 'CheckApp';
