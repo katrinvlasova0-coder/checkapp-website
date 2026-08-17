@@ -38,7 +38,7 @@ export function TestimonialCarousel() {
         {TESTIMONIALS.map((t) => (
           <div
             key={t.author}
-            className="min-w-[280px] flex-shrink-0 snap-center rounded-3xl bg-white/5 p-6 backdrop-blur-sm md:min-w-0"
+            className="min-w-[280px] flex-shrink-0 snap-center rounded-[1.75rem] border border-white/10 bg-white/[0.06] p-6 backdrop-blur-sm md:min-w-0"
           >
             <div className="text-accent-amber" aria-label={`${t.stars} out of 5 stars`}>
               {'★'.repeat(t.stars)}

@@ -23,8 +23,8 @@ const TEAM = [
 
 const VALUES = [
   { Icon: HandshakeIcon, title: 'Care over data',  desc: 'We build for feelings, not metrics.',         accent: 'bg-primary/10 text-primary' },
-  { Icon: LockKeyhole,   title: 'Privacy first',    desc: 'Your health data is yours. Always.',          accent: 'bg-blue-500/10 text-blue-500' },
-  { Icon: FlaskConical,  title: 'Science-backed',   desc: 'Every feature is grounded in research.',      accent: 'bg-amber-500/10 text-amber-500' },
+  { Icon: LockKeyhole,   title: 'Privacy first',    desc: 'Your health data is yours. Always.',          accent: 'bg-forest/10 text-forest' },
+  { Icon: FlaskConical,  title: 'Science-backed',   desc: 'Every feature is grounded in research.',      accent: 'bg-accent-amber/10 text-accent-amber' },
 ];
 
 const CAN_DO = [
@@ -107,7 +107,7 @@ export default function AboutPage() {
         <h2 className="font-display text-3xl font-bold">The team</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {TEAM.map((member) => (
-            <div key={member.name} className="rounded-3xl border border-black/5 bg-white p-6 shadow-sm">
+            <div key={member.name} className="surface rounded-3xl p-6">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-2xl font-bold text-primary">
                 {member.name.charAt(0)}
               </div>
@@ -125,7 +125,7 @@ export default function AboutPage() {
           {VALUES.map(({ Icon, title, desc, accent }) => (
             <div
               key={title}
-              className="rounded-3xl border border-black/5 bg-white p-6 shadow-sm"
+              className="surface rounded-3xl p-6"
             >
               <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl ${accent}`}>
                 <Icon size={22} />
@@ -140,7 +140,7 @@ export default function AboutPage() {
       <Section variant="light">
         <h2 className="font-display text-3xl font-bold">What DIDI Can and Cannot Do</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl bg-primary/5 p-6">
+          <div className="rounded-[1.75rem] border border-primary/15 bg-primary/5 p-6">
             <h3 className="mb-4 font-semibold text-primary">DIDI can:</h3>
             <ul className="space-y-3 text-text-secondary">
               {CAN_DO.map((item) => (
@@ -151,12 +151,12 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-          <div className="rounded-3xl bg-black/5 p-6">
+          <div className="rounded-[1.75rem] border border-black/[0.06] bg-bg-warm p-6">
             <h3 className="mb-4 font-semibold text-text">DIDI cannot:</h3>
             <ul className="space-y-3 text-text-secondary">
               {CANNOT_DO.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
-                  <XCircle size={18} className="mt-0.5 shrink-0 text-rose-500" />
+                  <XCircle size={18} className="mt-0.5 shrink-0 text-text-secondary" />
                   {item}
                 </li>
               ))}
@@ -167,7 +167,7 @@ export default function AboutPage() {
 
       <FourPMedicine />
 
-      <Section variant="gradient">
+      <Section variant="light">
         <CtaBanner
           headline="Try DIDI Today"
           subheadline="Join thousands building healthier habits through conversation."

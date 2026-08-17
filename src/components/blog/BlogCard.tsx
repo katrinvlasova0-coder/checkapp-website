@@ -4,17 +4,17 @@ import type { BlogPostMeta } from '@/lib/blog';
 
 // Category → gradient for the placeholder thumbnail
 const CATEGORY_GRADIENT: Record<string, string> = {
-  '4p-medicine':        'from-violet-600/80 to-violet-900',
-  predictive:           'from-blue-500/80 to-blue-900',
-  gamification:         'from-amber-500/80 to-orange-800',
-  'preventive-health':  'from-emerald-500/80 to-emerald-900',
-  hydration:            'from-cyan-500/80 to-cyan-900',
-  participative:        'from-teal-500/80 to-teal-900',
-  'oral-health':        'from-rose-500/80 to-rose-900',
-  longevity:            'from-indigo-500/80 to-indigo-900',
-  economics:            'from-slate-500/80 to-slate-900',
-  'daily-routine':      'from-green-600/80 to-green-900',
-  wellness:             'from-primary/80 to-forest',
+  '4p-medicine':        'from-forest to-primary-dark',
+  predictive:           'from-primary-dark to-forest',
+  gamification:         'from-accent-amber to-primary-dark',
+  'preventive-health':  'from-primary to-forest',
+  hydration:            'from-primary-light to-primary-dark',
+  participative:        'from-primary to-forest',
+  'oral-health':        'from-primary-dark to-forest',
+  longevity:            'from-forest to-forest-mid',
+  economics:            'from-forest-mid to-forest',
+  'daily-routine':      'from-primary to-primary-dark',
+  wellness:             'from-primary to-forest',
 };
 
 function categoryGradient(category: string): string {
@@ -52,7 +52,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
     return (
       <Link
         href={`/blog/${post.slug}`}
-        className="group col-span-full block overflow-hidden rounded-3xl bg-forest text-white"
+        className="group col-span-full block overflow-hidden rounded-[1.75rem] bg-forest text-white"
       >
         <div className={`flex h-56 items-center justify-center bg-gradient-to-br ${gradient}`}>
           {post.coverImage ? (
@@ -83,7 +83,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block overflow-hidden rounded-3xl bg-card shadow-lg transition-shadow hover:shadow-xl"
+      className="group block overflow-hidden rounded-[1.75rem] border border-black/[0.06] bg-card shadow-[0_1px_2px_rgb(14_31_1/0.04),0_16px_40px_rgb(14_31_1/0.06)] transition-shadow hover:shadow-[0_1px_2px_rgb(14_31_1/0.05),0_18px_48px_rgb(14_31_1/0.1)]"
     >
       <Thumbnail />
       <div className="p-6">

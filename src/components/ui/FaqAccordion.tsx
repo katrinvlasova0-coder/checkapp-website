@@ -22,7 +22,7 @@ export function FaqAccordion({ items, page = 'unknown' }: FaqAccordionProps) {
         const isOpen = openIndex === index;
 
         return (
-          <div key={item.question} className="overflow-hidden rounded-2xl border border-black/5 bg-card">
+          <div key={item.question} className="overflow-hidden rounded-2xl border border-black/[0.06] bg-card">
             <button
               type="button"
               className="flex w-full min-h-11 items-center justify-between gap-4 px-5 py-4 text-left font-semibold text-text"
@@ -38,7 +38,7 @@ export function FaqAccordion({ items, page = 'unknown' }: FaqAccordionProps) {
               </span>
             </button>
             {isOpen && (
-              <div className="border-t border-black/5 px-5 pb-4 pt-2 text-text-secondary leading-relaxed">
+              <div className="border-t border-black/[0.06] px-5 pb-4 pt-2 text-text-secondary leading-relaxed">
                 {item.answer}
               </div>
             )}

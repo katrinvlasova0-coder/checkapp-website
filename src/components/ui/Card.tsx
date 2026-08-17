@@ -9,10 +9,10 @@ type CardProps = {
 export function Card({ children, className = '', dark = false }: CardProps) {
   return (
     <div
-      className={`rounded-3xl p-6 md:p-8 ${
+      className={`rounded-[1.75rem] p-6 md:p-8 ${
         dark
-          ? 'bg-forest/80 text-white shadow-xl'
-          : 'bg-card text-text shadow-lg shadow-black/5'
+          ? 'border border-white/10 bg-forest/90 text-white shadow-[0_20px_50px_rgb(14_31_1/0.35)]'
+          : 'border border-black/[0.06] bg-card text-text shadow-[0_1px_2px_rgb(14_31_1/0.04),0_16px_40px_rgb(14_31_1/0.06)]'
       } ${className}`}
     >
       {children}

@@ -26,7 +26,7 @@ export function FeatureRow({ title, description, visual, reversed = false }: Fea
 
 export function ChatBubbleVisual() {
   return (
-    <div className="w-full max-w-sm rounded-3xl bg-bg-warm p-5 shadow-lg">
+    <div className="w-full max-w-sm rounded-[1.75rem] border border-black/[0.06] bg-bg-warm p-5 shadow-[0_1px_2px_rgb(14_31_1/0.04),0_16px_40px_rgb(14_31_1/0.06)]">
       <div className="mb-3 flex items-center gap-2">
         <SiteImage src="/assets/didi-avatar-header.png" alt="" width={28} height={28} className="rounded-full" />
         <span className="text-sm font-semibold">DIDI</span>
@@ -48,9 +48,9 @@ export function ChatBubbleVisual() {
 
 export function HydrationMeterVisual() {
   return (
-    <div className="w-full max-w-sm rounded-3xl bg-card p-6 shadow-lg">
+    <div className="w-full max-w-sm rounded-[1.75rem] border border-black/[0.06] bg-card p-6 shadow-[0_1px_2px_rgb(14_31_1/0.04),0_16px_40px_rgb(14_31_1/0.06)]">
       <p className="text-sm font-semibold text-text-secondary">Tongue Scan Result</p>
-      <div className="mt-4 h-4 overflow-hidden rounded-full bg-gray-200">
+      <div className="mt-4 h-4 overflow-hidden rounded-full bg-black/[0.08]">
         <div className="h-full w-[65%] rounded-full bg-gradient-to-r from-accent-amber to-primary" />
       </div>
       <p className="mt-2 text-lg font-bold text-primary">65% Hydrated</p>
@@ -69,7 +69,7 @@ export function VideoCircleVisual() {
 
 export function StreakVisual() {
   return (
-    <div className="w-full max-w-sm rounded-3xl bg-card p-6 shadow-lg">
+    <div className="w-full max-w-sm rounded-[1.75rem] border border-black/[0.06] bg-card p-6 shadow-[0_1px_2px_rgb(14_31_1/0.04),0_16px_40px_rgb(14_31_1/0.06)]">
       <div className="flex items-center gap-3">
         <SiteImage src="/assets/streak-flame.png" alt="Streak flame" width={40} height={40} />
         <div>
@@ -94,7 +94,7 @@ export function StreakVisual() {
 
 export function NotificationVisual() {
   return (
-    <div className="w-full max-w-sm rounded-2xl bg-card p-4 shadow-lg">
+    <div className="w-full max-w-sm rounded-2xl border border-black/[0.06] bg-card p-4 shadow-[0_1px_2px_rgb(14_31_1/0.04),0_16px_40px_rgb(14_31_1/0.06)]">
       <div className="flex items-start gap-3">
         <SiteImage src="/assets/didi-app-icon.png" alt="" width={36} height={36} className="rounded-lg" />
         <div>
@@ -115,7 +115,7 @@ export function TimelineVisual() {
         { day: 'Tue', mood: '😐', water: '4 glasses' },
         { day: 'Wed', mood: '😊', water: '7 glasses' },
       ].map((entry) => (
-        <div key={entry.day} className="flex items-center gap-4 rounded-2xl bg-card p-4 shadow-sm">
+        <div key={entry.day} className="flex items-center gap-4 rounded-2xl border border-black/[0.06] bg-card p-4">
           <span className="w-10 text-sm font-semibold text-text-secondary">{entry.day}</span>
           <span className="text-xl">{entry.mood}</span>
           <span className="text-sm text-text-secondary">{entry.water}</span>

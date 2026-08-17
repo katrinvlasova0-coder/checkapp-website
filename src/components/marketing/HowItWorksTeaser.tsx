@@ -13,13 +13,13 @@ const FEATURES = [
     Icon: Camera,
     title: 'Tongue Scans',
     description: 'Point your camera, tap once. DIDI reads hydration signals from colour, texture, and moisture in seconds.',
-    accent: 'bg-blue-500/10 text-blue-500',
+    accent: 'bg-primary/10 text-primary',
   },
   {
     Icon: Video,
     title: 'Video Messages',
     description: 'Send a short video message — DIDI watches and responds with personalised guidance.',
-    accent: 'bg-amber-500/10 text-amber-500',
+    accent: 'bg-accent-amber/10 text-accent-amber',
   },
 ];
 
@@ -34,7 +34,7 @@ export function HowItWorksTeaser() {
         {FEATURES.map(({ Icon, title, description, accent }) => (
           <div
             key={title}
-            className="rounded-3xl border border-black/5 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+            className="surface surface-hover rounded-3xl p-6"
           >
             <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl ${accent}`}>
               <Icon size={22} />

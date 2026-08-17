@@ -1,14 +1,16 @@
+/** CheckApp Figma v2.0 — mirrored from the mobile app `constants/designTokens.ts` */
 export const tokens = {
   colors: {
     primary: '#588317',
     primaryLight: '#93b050',
     primaryDark: '#658532',
-    forest: '#1A3A2A',
-    bgWarm: '#F5F3F0',
-    cardWhite: '#FFFFFF',
-    textPrimary: '#0F1A10',
-    textSecondary: '#5A6B5B',
-    accentAmber: '#F5A623',
+    forest: '#0e1f01',
+    forestMid: '#283b0f',
+    bgWarm: '#f6f8f0',
+    cardWhite: '#ffffff',
+    textPrimary: '#2d2d2d',
+    textSecondary: '#5c5c5c',
+    accentAmber: '#ff8c00',
     bubbleDidi: '#e7eedd',
     bubbleUser: '#e8e8e8',
   },

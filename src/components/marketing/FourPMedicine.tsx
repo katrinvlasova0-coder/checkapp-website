@@ -12,9 +12,9 @@ const PILLARS = [
     description:
       'DIDI learns your rhythms — sleep patterns, hydration habits, how you feel after a rough night. Every suggestion is shaped by you, not by an average population curve.',
     example: 'Example: DIDI knows you drink less water on Mondays and nudges you earlier that day.',
-    accent: 'from-emerald-500/20 to-emerald-500/5',
-    iconColor: 'text-emerald-500',
-    iconBg: 'bg-emerald-500/10',
+    accent: 'from-primary/30 to-transparent',
+    iconColor: 'text-primary-light',
+    iconBg: 'bg-primary/20',
   },
   {
     number: '02',
@@ -24,9 +24,9 @@ const PILLARS = [
     description:
       'Small changes in tongue colour, skin texture, or energy levels can signal shifts worth monitoring. DIDI tracks these patterns and flags them early — so you can act, not react.',
     example: 'Example: Consistent dry-tongue signals over three days prompt DIDI to suggest a hydration focus week.',
-    accent: 'from-blue-500/20 to-blue-500/5',
-    iconColor: 'text-blue-500',
-    iconBg: 'bg-blue-500/10',
+    accent: 'from-primary-light/20 to-transparent',
+    iconColor: 'text-primary-light',
+    iconBg: 'bg-white/10',
   },
   {
     number: '03',
@@ -36,9 +36,9 @@ const PILLARS = [
     description:
       'The cheapest healthcare is the kind you never need. DIDI suggests small, sustainable actions — drink one more glass, step outside for five minutes, try breathing before bed — that accumulate into lasting change.',
     example: 'Example: DIDI notices low hydration streaks and suggests keeping a water bottle at your desk.',
-    accent: 'from-amber-500/20 to-amber-500/5',
-    iconColor: 'text-amber-500',
-    iconBg: 'bg-amber-500/10',
+    accent: 'from-accent-amber/25 to-transparent',
+    iconColor: 'text-accent-amber',
+    iconBg: 'bg-accent-amber/15',
   },
   {
     number: '04',
@@ -48,9 +48,9 @@ const PILLARS = [
     description:
       'DIDI doesn\'t broadcast. She listens. Through daily conversations, video circles, and streak celebrations, you stay in active dialogue with your own wellness — not just a passive tracker.',
     example: 'Example: You send a video circle showing you\'re tired. DIDI responds with context-aware suggestions instead of a generic alert.',
-    accent: 'from-rose-500/20 to-rose-500/5',
-    iconColor: 'text-rose-500',
-    iconBg: 'bg-rose-500/10',
+    accent: 'from-white/10 to-transparent',
+    iconColor: 'text-white',
+    iconBg: 'bg-white/10',
   },
 ];
 
@@ -58,8 +58,12 @@ export function FourPMedicine() {
   const articles = getFourPMedicinePosts(4);
 
   return (
-    <section className="bg-forest py-24">
-      <div className="mx-auto max-w-6xl px-5 md:px-8">
+    <section className="relative overflow-hidden bg-forest py-24">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgb(147_176_80/0.22),transparent_60%)]"
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto max-w-6xl px-5 md:px-8">
         {/* Header */}
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="inline-block rounded-full border border-primary-light/30 bg-primary-light/10 px-4 py-1.5 text-sm font-semibold text-primary-light">

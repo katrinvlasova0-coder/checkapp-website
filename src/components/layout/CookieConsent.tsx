@@ -34,9 +34,9 @@ export function CookieConsent() {
       aria-live="polite"
       aria-label="Cookie consent"
     >
-      <div className="mx-auto max-w-4xl rounded-2xl border border-black/8 bg-white shadow-2xl">
+      <div className="mx-auto max-w-4xl rounded-[1.5rem] border border-black/[0.06] bg-card shadow-[0_12px_40px_rgb(14_31_1/0.12)]">
         <div className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:p-5">
-          <p className="text-sm leading-relaxed text-gray-600">
+          <p className="text-sm leading-relaxed text-text-secondary">
             We use cookies and similar technologies to improve your experience, analyse site
             traffic, and personalise content.{' '}
             <Link
@@ -50,13 +50,13 @@ export function CookieConsent() {
           <div className="flex shrink-0 items-center gap-2">
             <button
               onClick={handleDecline}
-              className="rounded-xl border border-gray-200 bg-transparent px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary/30"
+              className="rounded-full border border-black/10 bg-transparent px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-bg-warm focus:outline-none focus:ring-2 focus:ring-primary/30"
             >
               Necessary only
             </button>
             <button
               onClick={handleAccept}
-              className="rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/40"
+              className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               Accept all
             </button>

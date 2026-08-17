@@ -6,7 +6,7 @@ type AuthorBioProps = {
 
 export function AuthorBio({ name, role, checkedBy }: AuthorBioProps) {
   return (
-    <div className="rounded-3xl bg-card p-6 shadow-lg">
+    <div className="surface rounded-3xl p-6">
       <div className="flex items-center gap-4">
         <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-2xl font-bold text-primary">
           {name.charAt(0)}

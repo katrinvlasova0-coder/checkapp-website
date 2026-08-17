@@ -12,7 +12,7 @@ const variantClasses = {
   light: 'bg-card text-text',
   dark: 'bg-forest text-white',
   warm: 'bg-bg-warm text-text',
-  gradient: 'bg-gradient-to-br from-primary-light to-primary text-white',
+  gradient: 'bg-gradient-to-br from-primary-light via-primary to-forest text-white',
 };
 
 export function Section({
@@ -23,7 +23,7 @@ export function Section({
   containerClassName = '',
 }: SectionProps) {
   return (
-    <section id={id} className={`py-12 md:py-20 ${variantClasses[variant]} ${className}`}>
+    <section id={id} className={`py-14 md:py-24 ${variantClasses[variant]} ${className}`}>
       <div className={`mx-auto max-w-6xl px-5 md:px-8 ${containerClassName}`}>{children}</div>
     </section>
   );

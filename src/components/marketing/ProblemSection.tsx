@@ -5,20 +5,20 @@ const PROBLEMS = [
   {
     Icon: Droplets,
     text: 'You forget to drink water until you have a headache.',
-    color: 'text-blue-400',
-    bg: 'bg-blue-400/10',
+    color: 'text-primary',
+    bg: 'bg-primary/10',
   },
   {
     Icon: BarChart3,
     text: 'Health apps show charts. Nobody tells you what to do.',
-    color: 'text-amber-400',
-    bg: 'bg-amber-400/10',
+    color: 'text-accent-amber',
+    bg: 'bg-accent-amber/10',
   },
   {
     Icon: BellOff,
     text: 'Generic reminders get ignored after day three.',
-    color: 'text-rose-400',
-    bg: 'bg-rose-400/10',
+    color: 'text-text-secondary',
+    bg: 'bg-forest/10',
   },
 ];
 
@@ -48,7 +48,7 @@ export function ProblemSection() {
         {PROBLEMS.map(({ Icon, text, color, bg }) => (
           <div
             key={text}
-            className="rounded-3xl border border-black/5 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+            className="surface surface-hover rounded-3xl p-6"
           >
             <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl ${bg}`}>
               <Icon size={24} className={color} />

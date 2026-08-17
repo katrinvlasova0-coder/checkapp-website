@@ -12,7 +12,7 @@ const components = {
     return <h2 id={id} {...props} />;
   },
   table: (props: TableHTMLAttributes<HTMLTableElement>) => (
-    <div className="prose-table-wrap my-8 overflow-x-auto rounded-2xl border border-black/8 bg-card shadow-sm">
+    <div className="prose-table-wrap my-8 overflow-x-auto rounded-2xl border border-black/[0.06] bg-card shadow-[0_1px_2px_rgb(14_31_1/0.04),0_16px_40px_rgb(14_31_1/0.06)]">
       <table {...props} />
     </div>
   ),

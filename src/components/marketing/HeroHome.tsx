@@ -11,6 +11,10 @@ export function HeroHome() {
 
   return (
     <section className="relative min-h-[calc(100dvh-4rem)] overflow-hidden bg-forest pt-16 md:pt-20">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_75%_-10%,rgb(147_176_80/0.38),transparent_58%),radial-gradient(ellipse_45%_40%_at_0%_100%,rgb(88_131_23/0.22),transparent_55%)]"
+        aria-hidden="true"
+      />
       {/* Background decorative ellipses */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <SiteImage
@@ -47,7 +51,7 @@ export function HeroHome() {
             initial={reduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/80 backdrop-blur-sm"
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.08] px-4 py-1.5 text-sm font-medium text-white/80 backdrop-blur-md"
           >
             <Sparkles size={14} className="text-primary-light" />
             AI-powered wellness companion
@@ -89,7 +93,7 @@ export function HeroHome() {
             ].map(({ icon, text }) => (
               <span
                 key={text}
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/8 px-3 py-1 text-xs font-medium text-white/70"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.07] px-3 py-1 text-xs font-medium text-white/70"
               >
                 {typeof icon === 'string' ? icon : icon}
                 {text}
@@ -161,7 +165,7 @@ export function HeroHome() {
             <motion.div
               animate={reduceMotion ? undefined : { y: [0, -8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-              className="w-44 rounded-[2rem] border border-white/10 bg-black/50 p-2 shadow-2xl backdrop-blur-md sm:w-52"
+              className="w-44 rounded-[2rem] border border-white/10 bg-forest/70 p-2 shadow-[0_24px_60px_rgb(0_0_0/0.35)] backdrop-blur-md sm:w-52"
             >
               <div className="rounded-[1.5rem] bg-bg-warm p-3">
                 <div className="mb-2 flex items-center gap-2">
@@ -191,7 +195,7 @@ export function HeroHome() {
             <motion.div
               animate={reduceMotion ? undefined : { y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 2.5 }}
-              className="w-36 rounded-2xl border border-white/10 bg-black/50 px-3 py-2.5 shadow-xl backdrop-blur-md"
+              className="w-36 rounded-2xl border border-white/10 bg-forest/70 px-3 py-2.5 shadow-[0_16px_40px_rgb(0_0_0/0.3)] backdrop-blur-md"
             >
               <p className="text-xs font-semibold text-primary-light">Hydration signal</p>
               <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-white/20">

@@ -41,7 +41,7 @@ export function PricingCards() {
       {PLANS.map((plan) => (
         <Card
           key={plan.name}
-          className={`relative ${plan.highlighted ? 'ring-2 ring-primary' : ''}`}
+          className={`relative ${plan.highlighted ? 'ring-2 ring-primary ring-offset-2 ring-offset-bg-warm' : ''}`}
         >
           {plan.highlighted && (
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-0.5 text-xs font-semibold text-white">

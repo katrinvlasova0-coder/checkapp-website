@@ -22,15 +22,15 @@ const ROUTINE = [
     screen: (
       <div className="space-y-2 p-2">
         <div className="flex items-end gap-1.5">
-          <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#588317] text-white text-[8px] font-bold">D</div>
-          <div className="max-w-[85%] rounded-xl rounded-bl-sm bg-[#E7EEDD] px-2 py-1.5 text-[9px] leading-relaxed text-gray-700">
+          <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-white text-[8px] font-bold">D</div>
+          <div className="max-w-[85%] rounded-xl rounded-bl-sm bg-bubble-didi px-2 py-1.5 text-[9px] leading-relaxed text-text-secondary">
             Good morning! How&apos;s your energy? I&apos;d like a tongue photo today — different angle than yesterday.
           </div>
         </div>
         <div className="flex justify-end">
-          <div className="rounded-xl rounded-br-sm bg-[#E8E8E8] px-2 py-1.5 text-[9px] text-gray-700">Feeling okay! 😊</div>
+          <div className="rounded-xl rounded-br-sm bg-bubble-user px-2 py-1.5 text-[9px] text-text-secondary">Feeling okay! 😊</div>
         </div>
-        <div className="mt-2 w-full rounded-lg bg-[#588317] py-1.5 text-center text-[9px] font-semibold text-white">Tap to Check Up</div>
+        <div className="mt-2 w-full rounded-lg bg-primary py-1.5 text-center text-[9px] font-semibold text-white">Tap to Check Up</div>
       </div>
     ),
   },
@@ -39,20 +39,20 @@ const ROUTINE = [
     desc: "DIDI notices if you've had less than 30% of your daily water goal and gently follows up.",
     screen: (
       <div className="space-y-2 p-2">
-        <div className="rounded-xl bg-amber-50 px-2.5 py-2 text-[9px] text-amber-800">
+        <div className="rounded-xl bg-accent-amber/10 px-2.5 py-2 text-[9px] text-forest">
           <p className="font-semibold">⚡ Midday check</p>
           <p className="mt-0.5">You&apos;ve only hit 28% of your water goal. DIDI noticed.</p>
         </div>
         <div className="flex items-end gap-1.5">
-          <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#588317] text-white text-[8px] font-bold">D</div>
-          <div className="max-w-[85%] rounded-xl rounded-bl-sm bg-[#E7EEDD] px-2 py-1.5 text-[9px] leading-relaxed text-gray-700">
+          <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-white text-[8px] font-bold">D</div>
+          <div className="max-w-[85%] rounded-xl rounded-bl-sm bg-bubble-didi px-2 py-1.5 text-[9px] leading-relaxed text-text-secondary">
             Hey — it&apos;s 1pm and you&apos;re behind on water. Drink a big glass now?
           </div>
         </div>
-        <div className="h-2 overflow-hidden rounded-full bg-gray-200">
-          <div className="h-full w-[28%] rounded-full bg-[#588317]" />
+        <div className="h-2 overflow-hidden rounded-full bg-black/10">
+          <div className="h-full w-[28%] rounded-full bg-primary" />
         </div>
-        <p className="text-[8px] text-gray-500 text-center">28% of daily goal</p>
+        <p className="text-[8px] text-text-secondary text-center">28% of daily goal</p>
       </div>
     ),
   },
@@ -61,19 +61,19 @@ const ROUTINE = [
     desc: 'Available on demand — DIDI signals when a check makes sense based on your patterns.',
     screen: (
       <div className="space-y-2 p-2">
-        <p className="text-center text-[9px] font-bold text-gray-700">Scan Result</p>
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-pink-100 to-rose-50 shadow-inner">
+        <p className="text-center text-[9px] font-bold text-text-secondary">Scan Result</p>
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary/15 to-bubble-didi shadow-inner">
           <span className="text-2xl">👅</span>
         </div>
-        <div className="rounded-xl bg-[#588317]/8 px-2.5 py-2">
+        <div className="rounded-xl bg-primary/10 px-2.5 py-2">
           <div className="mb-1 flex justify-between text-[8px]">
-            <span className="font-semibold text-[#588317]">Hydration</span>
-            <span className="font-bold text-[#588317]">74%</span>
+            <span className="font-semibold text-primary">Hydration</span>
+            <span className="font-bold text-primary">74%</span>
           </div>
-          <div className="h-1.5 overflow-hidden rounded-full bg-gray-200">
-            <div className="h-full w-[74%] rounded-full bg-[#588317]" />
+          <div className="h-1.5 overflow-hidden rounded-full bg-black/10">
+            <div className="h-full w-[74%] rounded-full bg-primary" />
           </div>
-          <p className="mt-1 text-[8px] text-gray-600">Moderately hydrated. One more glass before dinner.</p>
+          <p className="mt-1 text-[8px] text-text-secondary">Moderately hydrated. One more glass before dinner.</p>
         </div>
       </div>
     ),
@@ -83,18 +83,18 @@ const ROUTINE = [
     desc: "DIDI wraps up the day — what went well, what to focus on tomorrow.",
     screen: (
       <div className="space-y-2 p-2">
-        <p className="text-[9px] font-bold text-gray-700">Today&apos;s Summary</p>
+        <p className="text-[9px] font-bold text-text-secondary">Today&apos;s Summary</p>
         <div className="grid grid-cols-2 gap-1.5">
           {[['Check-ins','3/3','✓'],['Hydration','74%','✓'],['Streak','5 days','🔥'],['Mood','Good','✓']].map(([l,v,i]) => (
-            <div key={l} className="rounded-lg bg-gray-50 px-2 py-1.5 text-center">
-              <p className="text-[10px] font-bold text-[#588317]">{v} {i}</p>
-              <p className="text-[8px] text-gray-500">{l}</p>
+            <div key={l} className="rounded-lg bg-bg-warm px-2 py-1.5 text-center">
+              <p className="text-[10px] font-bold text-primary">{v} {i}</p>
+              <p className="text-[8px] text-text-secondary">{l}</p>
             </div>
           ))}
         </div>
         <div className="flex items-start gap-1.5">
-          <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#588317] text-white text-[8px] font-bold">D</div>
-          <div className="rounded-xl rounded-tl-sm bg-[#E7EEDD] px-2 py-1.5 text-[8px] leading-relaxed text-gray-700">
+          <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-white text-[8px] font-bold">D</div>
+          <div className="rounded-xl rounded-tl-sm bg-bubble-didi px-2 py-1.5 text-[8px] leading-relaxed text-text-secondary">
             Solid day. Tomorrow I&apos;ll ask about sleep quality — it affects hydration too.
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function HowItWorksPage() {
         <h2 className="font-display text-3xl font-bold md:text-4xl">The Daily DIDI Routine</h2>
 
         {/* Dynamic AI callout */}
-        <div className="mt-8 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/8 to-primary/3 p-6 md:p-8">
+        <div className="mt-8 rounded-[1.75rem] border border-primary/20 bg-gradient-to-br from-primary/10 to-primary/5 p-6 md:p-8">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-primary text-white text-lg">
               ✦
@@ -186,17 +186,17 @@ export default function HowItWorksPage() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {ROUTINE.map((item) => (
-            <div key={item.time} className="flex flex-col rounded-3xl border border-black/5 bg-white shadow-sm overflow-hidden">
+            <div key={item.time} className="surface flex flex-col overflow-hidden">
               {/* Phone mockup preview */}
-              <div className="bg-[#F6F8F0] px-3 pt-3 pb-2">
+              <div className="bg-bg-warm px-3 pt-3 pb-2">
                 {/* Phone chrome mini */}
-                <div className="mx-auto max-w-[180px] rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
-                  <div className="flex h-4 items-center justify-center bg-gray-50">
-                    <div className="h-1.5 w-10 rounded-full bg-gray-200" />
+                <div className="mx-auto max-w-[180px] rounded-2xl border border-black/10 bg-white shadow-md overflow-hidden">
+                  <div className="flex h-4 items-center justify-center bg-bg-warm">
+                    <div className="h-1.5 w-10 rounded-full bg-black/10" />
                   </div>
                   {item.screen}
-                  <div className="flex h-3 items-center justify-center bg-gray-50">
-                    <div className="h-0.5 w-8 rounded-full bg-gray-300" />
+                  <div className="flex h-3 items-center justify-center bg-bg-warm">
+                    <div className="h-0.5 w-8 rounded-full bg-black/15" />
                   </div>
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function HowItWorksPage() {
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {SCAN_STEPS.map((s) => (
-            <div key={s.step} className="rounded-3xl bg-card p-6 shadow-lg">
+            <div key={s.step} className="surface p-6">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white font-bold">
                 {s.step}
               </span>
@@ -234,7 +234,7 @@ export default function HowItWorksPage() {
             </div>
           ))}
         </div>
-        <p className="mt-8 rounded-2xl bg-card p-4 text-sm text-text-secondary">
+        <p className="mt-8 rounded-2xl border border-black/[0.06] bg-card p-4 text-sm text-text-secondary">
           <strong className="text-text">Disclaimer:</strong> DIDI is not a medical device. Results are for personal
           wellness guidance only. Consult a doctor for medical concerns.
         </p>
@@ -258,7 +258,7 @@ export default function HowItWorksPage() {
         <h2 className="font-display text-3xl font-bold md:text-4xl">The Science Behind It</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {SCIENCE.map((s) => (
-            <div key={s.title} className="rounded-3xl bg-card p-6 shadow-lg">
+            <div key={s.title} className="surface p-6">
               <h3 className="font-display text-lg font-bold">{s.title}</h3>
               <p className="mt-2 text-text-secondary">{s.desc}</p>
               <a href={s.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-sm text-primary underline">

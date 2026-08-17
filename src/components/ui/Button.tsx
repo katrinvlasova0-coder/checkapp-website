@@ -20,11 +20,11 @@ type ButtonProps = {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    'bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/20 hover:scale-[1.03]',
+    'bg-primary text-white shadow-[0_8px_24px_rgb(88_131_23/0.28)] hover:bg-primary-dark hover:shadow-[0_10px_28px_rgb(88_131_23/0.35)]',
   ghost:
-    'border-2 border-white/30 text-white hover:bg-white/10 hover:scale-[1.03]',
+    'border border-white/25 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10',
   secondary:
-    'border-2 border-primary text-primary hover:bg-primary/5 hover:scale-[1.03]',
+    'border border-primary/25 bg-transparent text-primary hover:bg-primary/10',
 };
 
 export function Button({
@@ -38,7 +38,7 @@ export function Button({
   trackingPosition = 'unknown',
   ariaLabel,
 }: ButtonProps) {
-  const baseClasses = `inline-flex min-h-11 min-w-11 items-center justify-center rounded-full px-8 py-3 text-[15px] font-semibold transition-all duration-200 ${variantClasses[variant]} ${className}`;
+  const baseClasses = `inline-flex min-h-11 min-w-11 items-center justify-center rounded-full px-8 py-3 text-[15px] font-semibold tracking-[-0.01em] transition-[background-color,box-shadow,transform,border-color] duration-200 ease-out active:scale-[0.98] ${variantClasses[variant]} ${className}`;
 
   function handleClick() {
     const label = typeof children === 'string' ? children : ariaLabel ?? 'button';

@@ -1,17 +1,22 @@
 @import "tailwindcss";
 
+/* CheckApp Figma v2.0 — same tokens as the mobile app (`constants/designTokens.ts`) */
 :root {
   --color-primary: #588317;
   --color-primary-light: #93b050;
   --color-primary-dark: #658532;
-  --color-forest: #1A3A2A;
-  --color-bg-warm: #F5F3F0;
-  --color-card: #FFFFFF;
-  --color-text: #0F1A10;
-  --color-text-secondary: #5A6B5B;
-  --color-accent-amber: #F5A623;
+  --color-forest: #0e1f01;
+  --color-forest-mid: #283b0f;
+  --color-bg-warm: #f6f8f0;
+  --color-card: #ffffff;
+  --color-text: #2d2d2d;
+  --color-text-primary: #2d2d2d;
+  --color-text-secondary: #5c5c5c;
+  --color-accent-amber: #ff8c00;
   --color-bubble-didi: #e7eedd;
   --color-bubble-user: #e8e8e8;
+  --color-line: rgb(45 45 45 / 0.08);
+  --shadow-soft: 0 1px 2px rgb(14 31 1 / 0.04), 0 12px 40px rgb(14 31 1 / 0.06);
 }
 
 @theme inline {
@@ -19,9 +24,11 @@
   --color-primary-light: var(--color-primary-light);
   --color-primary-dark: var(--color-primary-dark);
   --color-forest: var(--color-forest);
+  --color-forest-mid: var(--color-forest-mid);
   --color-bg-warm: var(--color-bg-warm);
   --color-card: var(--color-card);
   --color-text: var(--color-text);
+  --color-text-primary: var(--color-text-primary);
   --color-text-secondary: var(--color-text-secondary);
   --color-accent-amber: var(--color-accent-amber);
   --color-bubble-didi: var(--color-bubble-didi);
@@ -32,6 +39,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -54,13 +63,33 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
+::selection {
+  background: color-mix(in srgb, var(--color-primary) 28%, white);
+  color: var(--color-forest);
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-display), system-ui, sans-serif;
+  letter-spacing: -0.02em;
 }
 
 :focus-visible {
   outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+  outline-offset: 3px;
+}
+
+@utility surface {
+  border-radius: 1.75rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-card);
+  box-shadow: var(--shadow-soft);
+}
+
+@utility surface-hover {
+  transition: box-shadow 200ms ease, transform 200ms ease;
+  &:hover {
+    box-shadow: 0 1px 2px rgb(14 31 1 / 0.05), 0 18px 48px rgb(14 31 1 / 0.1);
+  }
 }
 
 .prose-checkapp h2 {
@@ -80,7 +109,7 @@ h1, h2, h3, h4 {
 
 .prose-checkapp p {
   font-size: 1.125rem;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--color-text-secondary);
   margin-bottom: 1.25rem;
 }
@@ -93,14 +122,15 @@ h1, h2, h3, h4 {
 
 .prose-checkapp li {
   font-size: 1.125rem;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--color-text-secondary);
   margin-bottom: 0.5rem;
 }
 
 .prose-checkapp a {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .prose-checkapp strong {
@@ -121,7 +151,7 @@ h1, h2, h3, h4 {
   vertical-align: top;
   font-size: 1rem;
   line-height: 1.5;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--color-line);
 }
 
 .prose-checkapp .prose-table-wrap th {
@@ -141,11 +171,11 @@ h1, h2, h3, h4 {
 }
 
 .prose-checkapp .prose-table-wrap tbody tr:hover {
-  background: rgba(88, 131, 23, 0.04);
+  background: color-mix(in srgb, var(--color-primary) 6%, white);
 }
 
 .prose-checkapp hr {
   margin: 2.5rem 0;
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid var(--color-line);
 }

@@ -34,8 +34,10 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-          scrolled || !isHome ? 'bg-forest/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        className={`fixed top-0 z-50 w-full transition-[background-color,backdrop-filter,border-color,box-shadow] duration-300 ${
+          scrolled || !isHome
+            ? 'border-b border-white/10 bg-forest/80 shadow-[0_8px_32px_rgb(14_31_1/0.28)] backdrop-blur-xl'
+            : 'border-b border-transparent bg-transparent'
         }`}
       >
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5 md:h-16 md:px-8">
@@ -55,7 +57,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-white/80 transition-colors hover:text-white"
+                className="text-sm font-medium text-white/75 transition-colors hover:text-white"
               >
                 {link.label}
               </Link>

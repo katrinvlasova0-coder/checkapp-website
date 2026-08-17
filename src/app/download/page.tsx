@@ -77,7 +77,7 @@ export default function DownloadPage() {
 
       <Section className="pb-20">
         <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-sm">
+          <div className="surface p-6">
             <Smartphone className="h-8 w-8 text-primary" aria-hidden />
             <h2 className="mt-4 font-display text-xl font-bold">Install on Android</h2>
             <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-text-secondary">
@@ -91,7 +91,7 @@ export default function DownloadPage() {
             </ol>
           </div>
 
-          <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-sm">
+          <div className="surface p-6">
             <ShieldAlert className="h-8 w-8 text-primary" aria-hidden />
             <h2 className="mt-4 font-display text-xl font-bold">Before you install</h2>
             <ul className="mt-3 space-y-2 text-sm text-text-secondary">

@@ -3,20 +3,20 @@ import Link from 'next/link';
 import type { BlogPostMeta } from '@/lib/blog';
 
 const CATEGORY_GRADIENT: Record<string, string> = {
-  '4p-medicine': 'from-violet-600/80 to-violet-900',
-  'predictive-health': 'from-blue-500/80 to-blue-900',
-  gamification: 'from-amber-500/80 to-orange-800',
-  'preventive-health': 'from-emerald-500/80 to-emerald-900',
-  hydration: 'from-cyan-500/80 to-cyan-900',
-  participative: 'from-teal-500/80 to-teal-900',
-  'oral-health': 'from-rose-500/80 to-rose-900',
-  longevity: 'from-indigo-500/80 to-indigo-900',
-  economics: 'from-slate-500/80 to-slate-900',
-  'daily-routine': 'from-green-600/80 to-green-900',
-  wellness: 'from-primary/80 to-forest',
-  'ai-&-health': 'from-blue-500/80 to-indigo-900',
-  'hydration-science': 'from-cyan-500/80 to-teal-900',
-  'daily-habits': 'from-green-600/80 to-green-900',
+  '4p-medicine': 'from-forest to-primary-dark',
+  'predictive-health': 'from-primary-dark to-forest',
+  gamification: 'from-accent-amber to-primary-dark',
+  'preventive-health': 'from-primary to-forest',
+  hydration: 'from-primary-light to-primary-dark',
+  participative: 'from-primary to-forest',
+  'oral-health': 'from-primary-dark to-forest',
+  longevity: 'from-forest to-forest-mid',
+  economics: 'from-forest-mid to-forest',
+  'daily-routine': 'from-primary to-primary-dark',
+  wellness: 'from-primary to-forest',
+  'ai-&-health': 'from-primary-dark to-forest',
+  'hydration-science': 'from-primary-light to-forest',
+  'daily-habits': 'from-primary to-primary-dark',
 };
 
 function categoryGradient(category: string): string {
@@ -38,7 +38,7 @@ export function BlogRelatedCard({ post }: BlogRelatedCardProps) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/5 bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/[0.06] bg-card shadow-[0_1px_2px_rgb(14_31_1/0.04),0_16px_40px_rgb(14_31_1/0.06)] transition-all hover:-translate-y-0.5 hover:shadow-[0_1px_2px_rgb(14_31_1/0.05),0_18px_48px_rgb(14_31_1/0.1)]"
     >
       {post.coverImage ? (
         <div className="relative h-28 w-full shrink-0 overflow-hidden">

@@ -20,10 +20,10 @@ function Cell({ value }: { value: boolean }) {
 
 export function ComparisonTable() {
   return (
-    <div className="overflow-x-auto rounded-3xl bg-card shadow-lg">
+    <div className="overflow-x-auto rounded-[1.75rem] border border-black/[0.06] bg-card shadow-[0_1px_2px_rgb(14_31_1/0.04),0_16px_40px_rgb(14_31_1/0.06)]">
       <table className="w-full min-w-[500px] text-left">
         <thead>
-          <tr className="border-b border-black/5">
+          <tr className="border-b border-black/[0.06]">
             <th className="px-4 py-4 font-display font-bold text-text">Feature</th>
             <th className="px-4 py-4 text-center font-display font-bold text-primary">CheckApp</th>
             <th className="px-4 py-4 text-center font-display font-bold text-text-secondary">Generic hydration apps</th>
@@ -32,7 +32,7 @@ export function ComparisonTable() {
         </thead>
         <tbody>
           {ROWS.map((row) => (
-            <tr key={row.feature} className="border-b border-black/5 last:border-0">
+            <tr key={row.feature} className="border-b border-black/[0.06] last:border-0">
               <td className="px-4 py-3 font-medium text-text">{row.feature}</td>
               <Cell value={row.checkapp} />
               <Cell value={row.hydration} />
