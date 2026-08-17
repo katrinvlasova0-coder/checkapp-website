@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# APK is ~148MB — GitHub file limit is 100MB. Host via Expo artifact / Releases.
+public/downloads/*.apk
+
 # production
 /build
 
