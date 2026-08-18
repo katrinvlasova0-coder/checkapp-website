@@ -59,7 +59,7 @@ export function organizationSchema() {
     logo: `${SITE_URL}/assets/didi-app-icon.png`,
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'hello@checkapp.health',
+      email: 'hello@checkapp.today',
       contactType: 'customer support',
     },
   };

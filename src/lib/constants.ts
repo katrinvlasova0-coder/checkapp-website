@@ -27,6 +27,14 @@ export const APP_SCHEME_CALLBACK = 'checkapp://auth/callback';
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://checkapp.today';
 
+/** Public Supabase project — same backend as the Android app. Anon key is safe in the browser. */
+export const SUPABASE_URL = 'https://gzcxxbukqvpolrtwjpam.supabase.co';
+export const SUPABASE_ANON_KEY =
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd6Y3h4YnVrcXZwb2xydHdqcGFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwNDg5OTYsImV4cCI6MjA5NTYyNDk5Nn0.1X0pHRRK5j8WD17bc9av-puws6qk0cI59kXxCdhTQU0';
+
+export const ACCOUNT_DELETION_PATH = '/delete-account/';
+
 export const SITE_NAME = 'CheckApp';
 
 export const NAV_LINKS = [

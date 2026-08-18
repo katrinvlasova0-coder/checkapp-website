@@ -21,7 +21,7 @@ export default function PrivacyPage() {
 
       <Section variant="light" className="pt-24 md:pt-28">
         <h1 className="font-display text-4xl font-bold">Privacy Policy</h1>
-        <p className="mt-2 text-text-secondary">Last updated: June 1, 2026</p>
+        <p className="mt-2 text-text-secondary">Last updated: August 18, 2026</p>
 
         <div className="prose-checkapp mt-10 max-w-3xl">
           <h2>What data we collect</h2>
@@ -33,37 +33,41 @@ export default function PrivacyPage() {
 
           <h2>How we use AI</h2>
           <p>
-            DIDI uses AI (including Claude Vision) to analyze tongue photos, generate wellness
-            guidance, and respond to your messages. Your health data is processed to provide
-            personalized recommendations. We do not use your data to train third-party AI models
-            without your explicit consent.
+            DIDI uses a third-party AI provider (Anthropic / Claude, including Claude Vision) to
+            analyze tongue photos, generate wellness guidance, and respond to your messages. Photos
+            and message text are sent to Anthropic to produce a response. We do not use your data to
+            train CheckApp models, and we do not have a confirmed zero-retention agreement with
+            Anthropic. Treat this as third-party processing that may be logged under Anthropic&apos;s
+            own retention terms.
           </p>
 
           <h2>Data storage and security</h2>
           <p>
-            Your data is stored securely using industry-standard encryption. Tongue scan photos and
-            video messages are stored in encrypted cloud storage. We retain data as long as your
-            account is active or as required by law.
+            Your account data is stored with Supabase. Tongue scan photos and video messages are
+            stored in encrypted cloud storage. We retain CheckApp-held data as long as your account
+            is active, or as required by law. Deleting your account removes the data we store.
           </p>
 
           <h2>Your rights</h2>
           <p>
             You have the right to access, export, correct, or delete your personal data at any time.
-            Contact us at hello@checkapp.health to exercise these rights. If you are in the EU/EEA,
-            you have additional rights under GDPR including data portability and the right to lodge
-            a complaint with a supervisory authority.
+            To delete your account without using the app, go to{' '}
+            <a href="/delete-account/">checkapp.today/delete-account</a>
+            {' '}or email hello@checkapp.today. If you are in the EU/EEA, you have additional rights
+            under GDPR including data portability and the right to lodge a complaint with a
+            supervisory authority.
           </p>
 
           <h2>Third-party services</h2>
           <p>
-            We use Supabase (database and auth), Vercel (hosting), PostHog (analytics), and Apple
-            (app distribution). Each service has its own privacy policy governing data
-            they process on our behalf.
+            We use Supabase (database, auth, and file storage), Anthropic (AI processing of messages
+            and scan photos), GitHub Pages (website hosting), and PostHog (analytics). Each service
+            has its own privacy policy governing data they process on our behalf.
           </p>
 
           <h2>Contact</h2>
           <p>
-            For privacy questions: <a href="mailto:hello@checkapp.health">hello@checkapp.health</a>
+            For privacy questions: <a href="mailto:hello@checkapp.today">hello@checkapp.today</a>
           </p>
         </div>
       </Section>

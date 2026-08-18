@@ -53,6 +53,7 @@ export function Footer() {
               <li><Link href="/about" className="text-sm text-white/70 transition-colors hover:text-white">About</Link></li>
               <li><Link href="/privacy" className="text-sm text-white/70 transition-colors hover:text-white">Privacy</Link></li>
               <li><Link href="/terms" className="text-sm text-white/70 transition-colors hover:text-white">Terms</Link></li>
+              <li><Link href="/delete-account" className="text-sm text-white/70 transition-colors hover:text-white">Delete account</Link></li>
             </ul>
           </div>
 
@@ -71,6 +72,7 @@ export function Footer() {
           <div className="flex gap-4">
             <Link href="/privacy" className="transition-colors hover:text-white">Privacy</Link>
             <Link href="/terms" className="transition-colors hover:text-white">Terms</Link>
+            <Link href="/delete-account" className="transition-colors hover:text-white">Delete account</Link>
           </div>
         </div>
       </div>
