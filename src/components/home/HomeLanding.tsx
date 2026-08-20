@@ -353,9 +353,9 @@ export function HomeLanding() {
             <div className="proof-photo">
               <SiteImage
                 src="/assets/photos/happy-checkin.jpg"
-                alt="Athletic woman in the gym — the kind of everyday energy CheckApp is built for"
-                width={1400}
-                height={2100}
+                alt="Woman laughing outdoors — bright everyday wellness energy"
+                width={1200}
+                height={1800}
                 className="proof-photo-img"
                 priority={false}
               />
