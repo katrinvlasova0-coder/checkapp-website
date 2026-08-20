@@ -36,7 +36,7 @@ const FEATURES_FAQ = [
   {
     question: 'Is there a free tier?',
     answer:
-      'Yes. The free plan includes 5 DIDI messages per month, 3 tongue scans, and basic streak tracking.',
+      'Yes. CheckApp is free — we believe everyone deserves access to quality tools for taking care of their health. No credit card required.',
   },
   {
     question: 'What are short video messages?',
@@ -87,7 +87,7 @@ export default function FeaturesPage() {
           />
           <FeatureRow
             title="Short Video Messages"
-            description="Send a short video message. DIDI sees you, not just your words. Like voice messages — but for your health."
+            description="Send a short circular video — like a Telegram video note. DIDI sees you, not just your words."
             visual={<VideoCircleVisual />}
           />
           <FeatureRow

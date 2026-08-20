@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/Button';
 import { Section } from '@/components/ui/Section';
 import { AnswerBlock } from '@/components/marketing/AnswerBlock';
 import { CtaBanner } from '@/components/marketing/CtaBanner';
+import { VideoCircleVisual } from '@/components/marketing/FeatureRow';
 import { createMetadata, breadcrumbSchema } from '@/lib/seo';
 import { APP_DOWNLOAD_URL } from '@/lib/constants';
 import { Sun, Clock, Camera, Moon } from 'lucide-react';
@@ -241,16 +242,16 @@ export default function HowItWorksPage() {
       </Section>
 
       <Section variant="light">
-        <h2 className="font-display text-3xl font-bold md:text-4xl">Short Video Messages to DIDI</h2>
-        <p className="mt-4 max-w-2xl text-lg text-text-secondary">
-          Record a short video message for DIDI — show your tongue, describe how you feel, or
-          just check in visually. DIDI watches and responds with context-aware feedback. Like
-          voice messages, but for your health.
-        </p>
-        <div className="mt-8 flex justify-center">
-          <div className="flex h-32 w-32 items-center justify-center rounded-full border-4 border-primary bg-primary/5">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-12 w-12 text-primary" aria-hidden="true"><path d="m22 8-6 4 6 4V8z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
+        <div className="grid items-center gap-10 md:grid-cols-[1.2fr_0.8fr] md:gap-14">
+          <div>
+            <h2 className="font-display text-3xl font-bold md:text-4xl">Short Video Messages to DIDI</h2>
+            <p className="mt-4 max-w-xl text-lg text-text-secondary">
+              Record a short circular video — show your tongue, describe how you feel, or just check
+              in visually. DIDI watches and responds with context-aware feedback. Like a video note,
+              but for your health.
+            </p>
           </div>
+          <VideoCircleVisual />
         </div>
       </Section>
 

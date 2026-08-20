@@ -1,4 +1,4 @@
-import { Inter, DM_Sans } from 'next/font/google';
+import { DM_Sans, DM_Mono, Bricolage_Grotesque } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
@@ -11,16 +11,23 @@ import { JsonLd } from '@/components/layout/JsonLd';
 import { createMetadata, mobileApplicationSchema, organizationSchema } from '@/lib/seo';
 import './globals.css';
 
-const inter = Inter({
-  variable: '--font-inter',
+const dmSans = DM_Sans({
+  variable: '--font-dm-sans',
   subsets: ['latin'],
   display: 'swap',
 });
 
-const dmSans = DM_Sans({
-  variable: '--font-display',
+const bricolage = Bricolage_Grotesque({
+  variable: '--font-bricolage',
   subsets: ['latin'],
-  weight: ['600', '700', '800'],
+  weight: ['500', '600', '700'],
+  display: 'swap',
+});
+
+const dmMono = DM_Mono({
+  variable: '--font-dm-mono',
+  subsets: ['latin'],
+  weight: ['400', '500'],
   display: 'swap',
 });
 
@@ -37,7 +44,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSans.variable} h-full scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${bricolage.variable} ${dmMono.variable} h-full scroll-smooth`}
+    >
       <body className="min-h-full flex flex-col font-sans antialiased pb-20 md:pb-0">
         <JsonLd data={[organizationSchema(), mobileApplicationSchema()]} />
         <Header />

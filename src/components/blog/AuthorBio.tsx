@@ -1,16 +1,29 @@
+import { SiteImage } from '@/components/ui/SiteImage';
+
 type AuthorBioProps = {
   name: string;
   role: string;
+  imageSrc?: string;
   checkedBy?: string;
 };
 
-export function AuthorBio({ name, role, checkedBy }: AuthorBioProps) {
+export function AuthorBio({ name, role, imageSrc, checkedBy }: AuthorBioProps) {
   return (
     <div className="surface rounded-3xl p-6">
       <div className="flex items-center gap-4">
-        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-2xl font-bold text-primary">
-          {name.charAt(0)}
-        </div>
+        {imageSrc ? (
+          <SiteImage
+            src={imageSrc}
+            alt={name}
+            width={56}
+            height={56}
+            className="h-14 w-14 rounded-full object-cover object-[center_18%]"
+          />
+        ) : (
+          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-2xl font-bold text-primary">
+            {name.charAt(0)}
+          </div>
+        )}
         <div>
           <p className="font-semibold text-text">{name}</p>
           <p className="text-sm text-text-secondary">{role}</p>

@@ -7,6 +7,7 @@ const BLOG_DIR = path.join(process.cwd(), 'content/blog');
 export type BlogAuthor = {
   name: string;
   role: string;
+  image?: string;
 };
 
 export type BlogFaq = {
@@ -45,15 +46,33 @@ function parsePost(filename: string): BlogPost {
   const raw = fs.readFileSync(path.join(BLOG_DIR, filename), 'utf8');
   const { data, content } = matter(raw);
 
+  const DEFAULT_AUTHOR: BlogAuthor = {
+    name: 'Ed Musinski',
+    role: 'Chief Science Consultant',
+    image: '/assets/photos/ed-musinski.png',
+  };
+
   // Handle both object and string author formats
   const rawAuthor = data.author;
-  const author: BlogAuthor =
+  let author: BlogAuthor =
     rawAuthor && typeof rawAuthor === 'object'
       ? (rawAuthor as BlogAuthor)
       : {
-          name: typeof rawAuthor === 'string' ? rawAuthor : 'CheckApp Wellness Team',
+          name: typeof rawAuthor === 'string' ? rawAuthor : DEFAULT_AUTHOR.name,
           role: 'Wellness Editor',
         };
+
+  // Map legacy team bylines to the scientific consultant
+  if (
+    author.name === 'CheckApp Wellness Team' ||
+    author.name === 'CheckApp Team'
+  ) {
+    author = DEFAULT_AUTHOR;
+  }
+
+  if (!author.image && author.name === DEFAULT_AUTHOR.name) {
+    author = { ...author, image: DEFAULT_AUTHOR.image, role: author.role || DEFAULT_AUTHOR.role };
+  }
 
   // Handle both datePublished and date fields
   const datePublished = (data.datePublished ?? data.date ?? new Date().toISOString().slice(0, 10)) as string;

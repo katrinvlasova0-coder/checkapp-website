@@ -61,8 +61,40 @@ export function HydrationMeterVisual() {
 
 export function VideoCircleVisual() {
   return (
-    <div className="flex h-40 w-40 items-center justify-center rounded-full border-4 border-primary bg-forest/5 shadow-lg">
-      <span className="text-4xl" aria-hidden="true">🎥</span>
+    <div className="relative mx-auto flex h-72 w-full max-w-[280px] items-center justify-center">
+      <div
+        className="absolute inset-[12%] rounded-full bg-gradient-to-br from-[#d7eef6]/80 via-bg-warm to-primary/15 blur-sm"
+        aria-hidden
+      />
+      {/* Soft secondary bubble — cropped fragment, small + blurred so quality doesn't read */}
+      <div
+        className="absolute left-2 top-8 h-16 w-16 overflow-hidden rounded-full border-2 border-white/90 opacity-55 shadow-md blur-[0.3px]"
+        aria-hidden
+      >
+        <SiteImage
+          src="/assets/screens/video-circles-telegram.png"
+          alt=""
+          width={421}
+          height={500}
+          className="h-full w-full scale-[3.4] object-cover object-[48%_18%]"
+        />
+      </div>
+      {/* Main circular video note — tight crop on the face circle only */}
+      <div className="relative z-10 h-44 w-44 overflow-hidden rounded-full border-[3px] border-white shadow-[0_18px_40px_rgb(14_31_1/0.18)] ring-1 ring-forest/10 md:h-48 md:w-48">
+        <SiteImage
+          src="/assets/screens/video-circles-telegram.png"
+          alt="Circular video message to DIDI"
+          width={421}
+          height={500}
+          className="h-full w-full scale-[2.35] object-cover object-[50%_44%]"
+        />
+      </div>
+      <div className="absolute bottom-10 right-6 z-10 rounded-full bg-forest/80 px-2.5 py-1 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
+        0:08
+      </div>
+      <p className="absolute -bottom-1 left-1/2 w-max -translate-x-1/2 text-center text-xs font-medium text-text-secondary">
+        Short video note to DIDI
+      </p>
     </div>
   );
 }

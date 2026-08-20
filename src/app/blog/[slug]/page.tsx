@@ -125,6 +125,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <AuthorBio
                 name={post.author.name}
                 role={post.author.role}
+                imageSrc={post.author.image}
                 checkedBy={post.checkedBy}
               />
             </div>

@@ -41,7 +41,6 @@ export const NAV_LINKS = [
   { href: '/how-it-works', label: 'How It Works' },
   { href: '/features', label: 'Features' },
   { href: '/blog', label: 'Blog' },
-  { href: '/about', label: 'About' },
 ] as const;
 
 export const SOCIAL_LINKS = {
