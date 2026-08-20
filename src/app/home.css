@@ -1411,6 +1411,12 @@
     grid-template-columns: 1fr;
   }
 
+  .home-landing .proof-photo {
+    max-width: 220px;
+    max-height: 240px;
+    justify-self: start;
+  }
+
   .home-landing .proof-stats {
     grid-template-columns: 1fr;
   }
