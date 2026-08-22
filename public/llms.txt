@@ -1,0 +1,29 @@
+# CheckApp
+
+> Educational wellness articles about hydration, daily habits, and AI health companions. Not medical advice.
+
+Site: https://checkapp.today/
+Blog: https://checkapp.today/blog/
+Download: https://checkapp.today/download/
+
+## Articles
+
+- [The Basics of 4P Medicine: What It Means for Your Daily Life](https://checkapp.today/blog/4p-medicine-basics/)
+- [What Can an AI Health Companion Actually Do? (Honest Guide)](https://checkapp.today/blog/ai-health-companion-guide/)
+- [Why Continuous Dialogue Beats One-Off Doctor Visits](https://checkapp.today/blog/continuous-dialogue-vs-doctor-visits/)
+- [Building a Daily Health Routine You Won't Quit](https://checkapp.today/blog/daily-health-routine-that-sticks/)
+- [Bio-Tracking Without the Stress: The Psychology of Gamified Health](https://checkapp.today/blog/gamified-health-psychology/)
+- [How to Tell If You're Dehydrated: 7 Signs to Check Right Now](https://checkapp.today/blog/how-to-tell-if-dehydrated/)
+- [Hydration and Skin: What Your Face Says About Your Water Intake](https://checkapp.today/blog/hydration-skin-face-signals/)
+- [Longevity Habits You Can Start in One Minute a Day](https://checkapp.today/blog/longevity-habits-one-minute/)
+- [Oral Health as a Window to Overall Wellness](https://checkapp.today/blog/oral-health-window-to-wellness/)
+- [The Participative Patient: Taking Control of Your Health Data](https://checkapp.today/blog/participative-patient-health-data/)
+- [Predictive Health: How AI Patterns Spot What the Mirror Misses](https://checkapp.today/blog/predictive-health-ai-patterns/)
+- [Preventive Care vs. Reactive Care: The Economic Difference](https://checkapp.today/blog/preventive-vs-reactive-care-economics/)
+- [How to Build a Water Drinking Habit That Actually Sticks](https://checkapp.today/blog/water-drinking-habit/)
+
+## Product
+
+- [How It Works](https://checkapp.today/how-it-works/)
+- [Features](https://checkapp.today/features/)
+- [Get CheckApp Free](https://checkapp.today/download/)

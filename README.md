@@ -32,7 +32,7 @@ Open [http://localhost:3000](http://localhost:3000).
 Copy `.env.example` to `.env.local`:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://checkapp.health
+NEXT_PUBLIC_SITE_URL=https://checkapp.today
 NEXT_PUBLIC_POSTHOG_KEY=phc_...        # optional
 NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ```

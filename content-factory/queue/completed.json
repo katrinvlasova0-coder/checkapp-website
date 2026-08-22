@@ -1,0 +1,392 @@
+[
+  {
+    "id": 1,
+    "cluster": "4P Medicine",
+    "slug": "4p-medicine-basics",
+    "titleDe": "The Basics of 4P Medicine: What It Means for Your Daily Life",
+    "titleEn": "The Basics of 4P Medicine: What It Means for Your Daily Life",
+    "keywordDe": "4P medicine basics",
+    "keywordEn": "4P medicine basics",
+    "lsiKeywords": [
+      "personalised medicine",
+      "predictive health",
+      "preventive care",
+      "participative patient"
+    ],
+    "format": "Explainer",
+    "category": "4P Medicine",
+    "unsplashQuery": "personalized health wellness technology",
+    "status": "completed",
+    "priority": "high",
+    "searchVolDe": 1200,
+    "kd": 24,
+    "searchVolEn": 2400,
+    "targetLength": 1500,
+    "taSegments": [
+      "health-curious"
+    ],
+    "plannedDate": "2026-05-10",
+    "language": "EN",
+    "completedAt": "2026-05-10"
+  },
+  {
+    "id": 2,
+    "cluster": "AI Companion",
+    "slug": "predictive-health-ai-patterns",
+    "titleDe": "Predictive Health: How AI Patterns Spot What the Mirror Misses",
+    "titleEn": "Predictive Health: How AI Patterns Spot What the Mirror Misses",
+    "keywordDe": "predictive health AI",
+    "keywordEn": "predictive health AI",
+    "lsiKeywords": [
+      "AI pattern recognition",
+      "wellness signals",
+      "tongue analysis",
+      "early health detection"
+    ],
+    "format": "Explainer",
+    "category": "AI & Health",
+    "unsplashQuery": "AI health pattern analysis mirror",
+    "status": "completed",
+    "priority": "high",
+    "searchVolDe": 900,
+    "kd": 22,
+    "searchVolEn": 1800,
+    "targetLength": 1500,
+    "taSegments": [
+      "health-curious"
+    ],
+    "plannedDate": "2026-05-14",
+    "language": "EN",
+    "completedAt": "2026-05-14"
+  },
+  {
+    "id": 3,
+    "cluster": "Habits",
+    "slug": "gamified-health-psychology",
+    "titleDe": "Bio-Tracking Without the Stress: The Psychology of Gamified Health",
+    "titleEn": "Bio-Tracking Without the Stress: The Psychology of Gamified Health",
+    "keywordDe": "gamified health psychology",
+    "keywordEn": "gamified health psychology",
+    "lsiKeywords": [
+      "streak psychology",
+      "behavioural science",
+      "wellness motivation",
+      "habit gamification"
+    ],
+    "format": "Explainer",
+    "category": "Daily Habits",
+    "unsplashQuery": "wellness app gamification streak",
+    "status": "completed",
+    "priority": "high",
+    "searchVolDe": 1100,
+    "kd": 20,
+    "searchVolEn": 2200,
+    "targetLength": 1500,
+    "taSegments": [
+      "beginners"
+    ],
+    "plannedDate": "2026-05-18",
+    "language": "EN",
+    "completedAt": "2026-05-18"
+  },
+  {
+    "id": 4,
+    "cluster": "Preventive Care",
+    "slug": "continuous-dialogue-vs-doctor-visits",
+    "titleDe": "Why Continuous Dialogue Beats One-Off Doctor Visits",
+    "titleEn": "Why Continuous Dialogue Beats One-Off Doctor Visits",
+    "keywordDe": "continuous wellness dialogue",
+    "keywordEn": "continuous wellness dialogue",
+    "lsiKeywords": [
+      "continuous monitoring",
+      "preventive care",
+      "health check-ins",
+      "wellness dialogue"
+    ],
+    "format": "Explainer",
+    "category": "Preventive Care",
+    "unsplashQuery": "doctor patient continuous care conversation",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 800,
+    "kd": 18,
+    "searchVolEn": 1600,
+    "targetLength": 1500,
+    "taSegments": [
+      "health-curious"
+    ],
+    "plannedDate": "2026-05-22",
+    "language": "EN",
+    "completedAt": "2026-05-22"
+  },
+  {
+    "id": 5,
+    "cluster": "Habits",
+    "slug": "water-drinking-habit",
+    "titleDe": "How to Build a Water Drinking Habit That Actually Sticks",
+    "titleEn": "How to Build a Water Drinking Habit That Actually Sticks",
+    "keywordDe": "water drinking habit",
+    "keywordEn": "water drinking habit",
+    "lsiKeywords": [
+      "hydration habit",
+      "daily water intake",
+      "behaviour change",
+      "wellness routine"
+    ],
+    "format": "Howto",
+    "category": "Daily Habits",
+    "unsplashQuery": "person drinking water morning routine",
+    "status": "completed",
+    "priority": "high",
+    "searchVolDe": 3200,
+    "kd": 26,
+    "searchVolEn": 6400,
+    "targetLength": 1500,
+    "taSegments": [
+      "beginners"
+    ],
+    "plannedDate": "2026-05-25",
+    "language": "EN",
+    "completedAt": "2026-05-25"
+  },
+  {
+    "id": 6,
+    "cluster": "Hydration",
+    "slug": "hydration-skin-face-signals",
+    "titleDe": "Hydration and Skin: What Your Face Says About Your Water Intake",
+    "titleEn": "Hydration and Skin: What Your Face Says About Your Water Intake",
+    "keywordDe": "hydration skin signals",
+    "keywordEn": "hydration skin signals",
+    "lsiKeywords": [
+      "dehydration face signs",
+      "skin moisture",
+      "facial hydration",
+      "wellness signals"
+    ],
+    "format": "Explainer",
+    "category": "Hydration Science",
+    "unsplashQuery": "hydrated skin face wellness mirror",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 1400,
+    "kd": 21,
+    "searchVolEn": 2800,
+    "targetLength": 1500,
+    "taSegments": [
+      "health-curious"
+    ],
+    "plannedDate": "2026-05-26",
+    "language": "EN",
+    "completedAt": "2026-05-26"
+  },
+  {
+    "id": 7,
+    "cluster": "AI Companion",
+    "slug": "ai-health-companion-guide",
+    "titleDe": "What Can an AI Health Companion Actually Do? (Honest Guide)",
+    "titleEn": "What Can an AI Health Companion Actually Do? (Honest Guide)",
+    "keywordDe": "AI health companion",
+    "keywordEn": "AI health companion",
+    "lsiKeywords": [
+      "AI wellness assistant",
+      "health chatbot",
+      "DIDI companion",
+      "personalized health AI"
+    ],
+    "format": "Guide",
+    "category": "AI & Health",
+    "unsplashQuery": "AI health companion smartphone wellness",
+    "status": "completed",
+    "priority": "high",
+    "searchVolDe": 1800,
+    "kd": 28,
+    "searchVolEn": 3600,
+    "targetLength": 1500,
+    "taSegments": [
+      "beginners"
+    ],
+    "plannedDate": "2026-05-28",
+    "language": "EN",
+    "completedAt": "2026-05-28"
+  },
+  {
+    "id": 8,
+    "cluster": "4P Medicine",
+    "slug": "participative-patient-health-data",
+    "titleDe": "The Participative Patient: Taking Control of Your Health Data",
+    "titleEn": "The Participative Patient: Taking Control of Your Health Data",
+    "keywordDe": "participative health data",
+    "keywordEn": "participative health data",
+    "lsiKeywords": [
+      "patient empowerment",
+      "health data ownership",
+      "4P medicine",
+      "personal health records"
+    ],
+    "format": "Guide",
+    "category": "4P Medicine",
+    "unsplashQuery": "patient health data dashboard control",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 700,
+    "kd": 19,
+    "searchVolEn": 1400,
+    "targetLength": 1500,
+    "taSegments": [
+      "health-curious"
+    ],
+    "plannedDate": "2026-05-30",
+    "language": "EN",
+    "completedAt": "2026-05-30"
+  },
+  {
+    "id": 9,
+    "cluster": "Hydration",
+    "slug": "how-to-tell-if-dehydrated",
+    "titleDe": "How to Tell If You're Dehydrated: 7 Signs to Check Right Now",
+    "titleEn": "How to Tell If You're Dehydrated: 7 Signs to Check Right Now",
+    "keywordDe": "signs of dehydration",
+    "keywordEn": "signs of dehydration",
+    "lsiKeywords": [
+      "dehydration symptoms",
+      "tongue color",
+      "dark urine",
+      "thirst signals"
+    ],
+    "format": "Howto",
+    "category": "Hydration Science",
+    "unsplashQuery": "dehydration signs water glass wellness",
+    "status": "completed",
+    "priority": "high",
+    "searchVolDe": 4500,
+    "kd": 30,
+    "searchVolEn": 9000,
+    "targetLength": 1500,
+    "taSegments": [
+      "beginners"
+    ],
+    "plannedDate": "2026-06-01",
+    "language": "EN",
+    "completedAt": "2026-06-01"
+  },
+  {
+    "id": 10,
+    "cluster": "Oral Wellness",
+    "slug": "oral-health-window-to-wellness",
+    "titleDe": "Oral Health as a Window to Overall Wellness",
+    "titleEn": "Oral Health as a Window to Overall Wellness",
+    "keywordDe": "oral health wellness",
+    "keywordEn": "oral health wellness",
+    "lsiKeywords": [
+      "tongue analysis",
+      "systemic health",
+      "oral microbiome",
+      "preventive wellness"
+    ],
+    "format": "Explainer",
+    "category": "Preventive Care",
+    "unsplashQuery": "oral health wellness tongue check",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 1000,
+    "kd": 20,
+    "searchVolEn": 2000,
+    "targetLength": 1500,
+    "taSegments": [
+      "health-curious"
+    ],
+    "plannedDate": "2026-06-02",
+    "language": "EN",
+    "completedAt": "2026-06-02"
+  },
+  {
+    "id": 11,
+    "cluster": "Habits",
+    "slug": "longevity-habits-one-minute",
+    "titleDe": "Longevity Habits You Can Start in One Minute a Day",
+    "titleEn": "Longevity Habits You Can Start in One Minute a Day",
+    "keywordDe": "one-minute longevity habits",
+    "keywordEn": "one-minute longevity habits",
+    "lsiKeywords": [
+      "micro habits",
+      "longevity routine",
+      "preventive health",
+      "daily wellness"
+    ],
+    "format": "Howto",
+    "category": "Daily Habits",
+    "unsplashQuery": "morning longevity wellness routine minute",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 1600,
+    "kd": 22,
+    "searchVolEn": 3200,
+    "targetLength": 1500,
+    "taSegments": [
+      "beginners"
+    ],
+    "plannedDate": "2026-06-04",
+    "language": "EN",
+    "completedAt": "2026-06-04"
+  },
+  {
+    "id": 12,
+    "cluster": "Preventive Care",
+    "slug": "preventive-vs-reactive-care-economics",
+    "titleDe": "Preventive Care vs. Reactive Care: The Economic Difference",
+    "titleEn": "Preventive Care vs. Reactive Care: The Economic Difference",
+    "keywordDe": "preventive vs reactive care",
+    "keywordEn": "preventive vs reactive care",
+    "lsiKeywords": [
+      "healthcare economics",
+      "prevention investment",
+      "chronic disease cost",
+      "wellness ROI"
+    ],
+    "format": "Explainer",
+    "category": "Preventive Care",
+    "unsplashQuery": "preventive healthcare economics wellness",
+    "status": "completed",
+    "priority": "medium",
+    "searchVolDe": 900,
+    "kd": 23,
+    "searchVolEn": 1800,
+    "targetLength": 1500,
+    "taSegments": [
+      "health-curious"
+    ],
+    "plannedDate": "2026-06-05",
+    "language": "EN",
+    "completedAt": "2026-06-05"
+  },
+  {
+    "id": 13,
+    "cluster": "Habits",
+    "slug": "daily-health-routine-that-sticks",
+    "titleDe": "Building a Daily Health Routine You Won't Quit",
+    "titleEn": "Building a Daily Health Routine You Won't Quit",
+    "keywordDe": "daily health routine",
+    "keywordEn": "daily health routine",
+    "lsiKeywords": [
+      "habit formation",
+      "behaviour change",
+      "wellness consistency",
+      "routine psychology"
+    ],
+    "format": "Guide",
+    "category": "Daily Habits",
+    "unsplashQuery": "daily health routine morning wellness",
+    "status": "completed",
+    "priority": "high",
+    "searchVolDe": 2100,
+    "kd": 25,
+    "searchVolEn": 4200,
+    "targetLength": 1500,
+    "taSegments": [
+      "beginners"
+    ],
+    "plannedDate": "2026-06-06",
+    "language": "EN",
+    "completedAt": "2026-06-06"
+  }
+]

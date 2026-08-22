@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Ed Musinski",
+    "role": "Chief Science Consultant",
+    "expertise": ["Hydration", "4P Medicine", "Preventive Care", "Oral Wellness", "Daily Habits"]
+  },
+  {
+    "name": "Morgan Chen",
+    "role": "Head of AI, CheckApp",
+    "expertise": ["AI Companion", "Predictive Health", "AI & Health"]
+  },
+  {
+    "name": "Sam Okonkwo",
+    "role": "Wellness Advisor, RD",
+    "expertise": ["Hydration", "Daily Habits", "Nutrition", "Preventive Care"]
+  }
+]
