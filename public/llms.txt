@@ -12,6 +12,7 @@ Download: https://checkapp.today/download/
 - [What Can an AI Health Companion Actually Do? (Honest Guide)](https://checkapp.today/blog/ai-health-companion-guide/)
 - [Why Continuous Dialogue Beats One-Off Doctor Visits](https://checkapp.today/blog/continuous-dialogue-vs-doctor-visits/)
 - [Building a Daily Health Routine You Won't Quit](https://checkapp.today/blog/daily-health-routine-that-sticks/)
+- [AI Wellness Companions: What They Do Well (and What They Cannot Do)](https://checkapp.today/blog/fallback-ai-companion-basics-2026-08-24/)
 - [Bio-Tracking Without the Stress: The Psychology of Gamified Health](https://checkapp.today/blog/gamified-health-psychology/)
 - [How to Tell If You're Dehydrated: 7 Signs to Check Right Now](https://checkapp.today/blog/how-to-tell-if-dehydrated/)
 - [Hydration and Skin: What Your Face Says About Your Water Intake](https://checkapp.today/blog/hydration-skin-face-signals/)
