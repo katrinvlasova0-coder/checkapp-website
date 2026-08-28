@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: PageProps) {
     title: post.title,
     description: post.description,
     path: `/blog/${slug}`,
+    ogImage: post.coverImage || undefined,
   });
 }
 

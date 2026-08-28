@@ -28,7 +28,9 @@ function getMinWordCount(format: string): number {
 function enrichRequest(request: ArticleRequest): ArticleRequest {
   const author = request.author ?? selectAuthor(request.cluster, request.category);
   const targetLength = Math.max(request.targetLength, getMinWordCount(request.format));
-  return { ...request, author, targetLength };
+  const today = new Date().toISOString().split('T')[0];
+  const plannedDate = today;
+  return { ...request, author, targetLength, plannedDate };
 }
 
 function extractMdxContent(raw: string): string {

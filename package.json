@@ -9,7 +9,8 @@
     "preview": "npx serve out",
     "start": "next start",
     "lint": "eslint",
-    "assets:sync": "bash scripts/sync-assets.sh"
+    "assets:sync": "bash scripts/sync-assets.sh",
+    "og:generate": "node scripts/generate-og-image.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.3",

@@ -48,17 +48,18 @@ jobs:
           PUBLISH_MOCK="${{ github.event.inputs.publish_mock }}"
           IS_SCHEDULE="${{ github.event_name == 'schedule' }}"
 
-          # Every other day on schedule (anchor: 2026-08-22 = first publish day).
+          # 1 in 3 days schedule: 1 day article, 2 days skip (anchor: 2026-08-28 = publish day).
           if [ "$IS_SCHEDULE" = "true" ]; then
-            ANCHOR_DAY=$(( $(date -u -d "2026-08-22" +%s) / 86400 ))
+            ANCHOR_DAY=$(( $(date -u -d "2026-08-28" +%s) / 86400 ))
             TODAY_DAY=$(( $(date -u +%s) / 86400 ))
-            if [ $(( (TODAY_DAY - ANCHOR_DAY) % 2 )) -ne 0 ]; then
-              echo "mode=skip-eod" >> "$GITHUB_OUTPUT"
+            DIFF=$(( TODAY_DAY - ANCHOR_DAY ))
+            if [ $(( (DIFF % 3 + 3) % 3 )) -ne 0 ]; then
+              echo "mode=skip-schedule" >> "$GITHUB_OUTPUT"
               echo "run=false" >> "$GITHUB_OUTPUT"
-              echo "⏭️ Every-other-day schedule: no article today (next run tomorrow 08:00 UTC)"
+              echo "⏭️ 1-in-3 schedule (1 publish, 2 skip): no article today (next publish day in $(( 3 - (DIFF % 3 + 3) % 3 )) days)"
               exit 0
             fi
-            echo "📅 Every-other-day schedule: publish day"
+            echo "📅 1-in-3 schedule: publish day"
           fi
 
           if [ "$HAS_ANTHROPIC" = "true" ]; then

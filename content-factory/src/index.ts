@@ -48,8 +48,9 @@ program
       const content = await generateArticle(request, { mock: options.mock });
 
       if (!options.dryRun) {
+        const publishDate = new Date().toISOString().split('T')[0];
         await publishArticle(slug, content, request, options.commit ?? false);
-        await addArticleToSitemap(slug, request.plannedDate, request.priority);
+        await addArticleToSitemap(slug, publishDate, request.priority);
         markAsCompleted(slug);
         console.log(`\n🎉 Article published: /blog/${slug}`);
       } else {
@@ -102,8 +103,9 @@ program
         ensureRobotsTxt();
         markInProgress(article.slug);
         const content = await generateArticle(article, { mock: options.mock });
+        const publishDate = new Date().toISOString().split('T')[0];
         await publishArticle(article.slug, content, article, options.commit ?? false);
-        await addArticleToSitemap(article.slug, article.plannedDate, article.priority);
+        await addArticleToSitemap(article.slug, publishDate, article.priority);
         markAsCompleted(article.slug);
         successCount++;
         console.log(`✅ Done: /blog/${article.slug}`);
