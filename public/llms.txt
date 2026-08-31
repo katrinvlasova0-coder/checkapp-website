@@ -12,6 +12,7 @@ Download: https://checkapp.today/download/
 - [What Can an AI Health Companion Actually Do? (Honest Guide)](https://checkapp.today/blog/ai-health-companion-guide/)
 - [Why Continuous Dialogue Beats One-Off Doctor Visits](https://checkapp.today/blog/continuous-dialogue-vs-doctor-visits/)
 - [Building a Daily Health Routine You Won't Quit](https://checkapp.today/blog/daily-health-routine-that-sticks/)
+- [4P Medicine in Plain English: Predictive, Preventive, Personalized, Participative](https://checkapp.today/blog/fallback-4p-prevention-2026-08-31/)
 - [AI Wellness Companions: What They Do Well (and What They Cannot Do)](https://checkapp.today/blog/fallback-ai-companion-basics-2026-08-24/)
 - [Daily Hydration Signals: What Your Body Tells You Before You Feel Thirsty](https://checkapp.today/blog/fallback-hydration-signals-2026-08-28/)
 - [Preventive Wellness Habits That Cost Less Than Reactive Fixes](https://checkapp.today/blog/fallback-preventive-habits-2026-08-26/)
