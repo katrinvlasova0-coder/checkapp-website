@@ -1,40 +1,41 @@
 # CheckApp
 
-> Educational wellness articles about hydration, daily habits, and AI health companions. Not medical advice.
+> AI wellness companion (DIDI). Wellness and habit support — not a medical device, and not a substitute for professional care.
 
 Site: https://checkapp.today/
 Blog: https://checkapp.today/blog/
 Download: https://checkapp.today/download/
 
-## Articles
+## Primary pages
 
-- [The Basics of 4P Medicine: What It Means for Your Daily Life](https://checkapp.today/blog/4p-medicine-basics/)
-- [What Can an AI Health Companion Actually Do? (Honest Guide)](https://checkapp.today/blog/ai-health-companion-guide/)
-- [Why Continuous Dialogue Beats One-Off Doctor Visits](https://checkapp.today/blog/continuous-dialogue-vs-doctor-visits/)
-- [Building a Daily Health Routine You Won't Quit](https://checkapp.today/blog/daily-health-routine-that-sticks/)
-- [4P Medicine in Plain English: Predictive, Preventive, Personalized, Participative](https://checkapp.today/blog/fallback-4p-prevention-2026-08-31/)
-- [4P Medicine in Plain English: Predictive, Preventive, Personalized, Participative](https://checkapp.today/blog/fallback-4p-prevention-2026-09-06/)
-- [4P Medicine in Plain English: Predictive, Preventive, Personalized, Participative](https://checkapp.today/blog/fallback-4p-prevention-2026-09-12/)
-- [4P Medicine in Plain English: Predictive, Preventive, Personalized, Participative](https://checkapp.today/blog/fallback-4p-prevention-2026-09-18/)
-- [AI Wellness Companions: What They Do Well (and What They Cannot Do)](https://checkapp.today/blog/fallback-ai-companion-basics-2026-08-24/)
-- [Daily Hydration Signals: What Your Body Tells You Before You Feel Thirsty](https://checkapp.today/blog/fallback-hydration-signals-2026-08-28/)
-- [Daily Hydration Signals: What Your Body Tells You Before You Feel Thirsty](https://checkapp.today/blog/fallback-hydration-signals-2026-09-03/)
-- [Daily Hydration Signals: What Your Body Tells You Before You Feel Thirsty](https://checkapp.today/blog/fallback-hydration-signals-2026-09-09/)
-- [Daily Hydration Signals: What Your Body Tells You Before You Feel Thirsty](https://checkapp.today/blog/fallback-hydration-signals-2026-09-15/)
-- [Daily Hydration Signals: What Your Body Tells You Before You Feel Thirsty](https://checkapp.today/blog/fallback-hydration-signals-2026-09-21/)
-- [Preventive Wellness Habits That Cost Less Than Reactive Fixes](https://checkapp.today/blog/fallback-preventive-habits-2026-08-26/)
+- [Home](https://checkapp.today/)
+- [Features](https://checkapp.today/features/)
+- [How it works](https://checkapp.today/how-it-works/)
+- [Download](https://checkapp.today/download/)
+- [About](https://checkapp.today/about/)
+- [Privacy](https://checkapp.today/privacy/)
+- [Terms](https://checkapp.today/terms/)
+
+## Blog
+
 - [Bio-Tracking Without the Stress: The Psychology of Gamified Health](https://checkapp.today/blog/gamified-health-psychology/)
+- [Building a Daily Health Routine You Won't Quit](https://checkapp.today/blog/daily-health-routine-that-sticks/)
+- [How to Build a Water Drinking Habit That Actually Sticks](https://checkapp.today/blog/water-drinking-habit/)
 - [How to Tell If You're Dehydrated: 7 Signs to Check Right Now](https://checkapp.today/blog/how-to-tell-if-dehydrated/)
 - [Hydration and Skin: What Your Face Says About Your Water Intake](https://checkapp.today/blog/hydration-skin-face-signals/)
 - [Longevity Habits You Can Start in One Minute a Day](https://checkapp.today/blog/longevity-habits-one-minute/)
 - [Oral Health as a Window to Overall Wellness](https://checkapp.today/blog/oral-health-window-to-wellness/)
-- [The Participative Patient: Taking Control of Your Health Data](https://checkapp.today/blog/participative-patient-health-data/)
 - [Predictive Health: How AI Patterns Spot What the Mirror Misses](https://checkapp.today/blog/predictive-health-ai-patterns/)
 - [Preventive Care vs. Reactive Care: The Economic Difference](https://checkapp.today/blog/preventive-vs-reactive-care-economics/)
-- [How to Build a Water Drinking Habit That Actually Sticks](https://checkapp.today/blog/water-drinking-habit/)
+- [The Basics of 4P Medicine: What It Means for Your Daily Life](https://checkapp.today/blog/4p-medicine-basics/)
+- [The Participative Patient: Taking Control of Your Health Data](https://checkapp.today/blog/participative-patient-health-data/)
+- [What Can an AI Health Companion Actually Do? (Honest Guide)](https://checkapp.today/blog/ai-health-companion-guide/)
+- [Why Continuous Dialogue Beats One-Off Doctor Visits](https://checkapp.today/blog/continuous-dialogue-vs-doctor-visits/)
 
-## Product
+## Wellness note
 
-- [How It Works](https://checkapp.today/how-it-works/)
-- [Features](https://checkapp.today/features/)
-- [Get CheckApp Free](https://checkapp.today/download/)
+CheckApp and DIDI are wellness companions, not medical devices. Do not treat this site as a diagnosis or a treatment plan.
+
+## Contact / download
+
+https://checkapp.today/download/
