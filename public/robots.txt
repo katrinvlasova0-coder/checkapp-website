@@ -4,6 +4,7 @@ Allow: /blog/
 Allow: /llms.txt
 
 Disallow: /api/
+Disallow: /auth/
 Disallow: /login
 Disallow: /register
 
@@ -11,42 +12,50 @@ Sitemap: https://checkapp.today/sitemap.xml
 
 User-agent: Googlebot
 Allow: /
+Disallow: /auth/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /auth/
 
 User-agent: GPTBot
 Allow: /
 Allow: /blog/
 Allow: /llms.txt
+Disallow: /auth/
 
 User-agent: ChatGPT-User
 Allow: /
 Allow: /blog/
 Allow: /llms.txt
+Disallow: /auth/
 
 User-agent: Claude-Web
 Allow: /
 Allow: /blog/
 Allow: /llms.txt
+Disallow: /auth/
 
 User-agent: ClaudeBot
 Allow: /
 Allow: /blog/
 Allow: /llms.txt
+Disallow: /auth/
 
 User-agent: PerplexityBot
 Allow: /
 Allow: /blog/
 Allow: /llms.txt
+Disallow: /auth/
 
 User-agent: Google-Extended
 Allow: /
 Allow: /blog/
 Allow: /llms.txt
+Disallow: /auth/
 
 User-agent: Applebot-Extended
 Allow: /
 Allow: /blog/
 Allow: /llms.txt
-
+Disallow: /auth/

@@ -29,6 +29,7 @@ Allow: /blog/
 Allow: /llms.txt
 
 Disallow: /api/
+Disallow: /auth/
 Disallow: /login
 Disallow: /register
 
@@ -36,11 +37,15 @@ Sitemap: ${BASE_URL}/sitemap.xml
 
 User-agent: Googlebot
 Allow: /
+Disallow: /auth/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /auth/
 
-${AI_BOTS.map((bot) => `User-agent: ${bot}\nAllow: /\nAllow: /blog/\nAllow: /llms.txt\n`).join('\n')}
+${AI_BOTS.map(
+  (bot) => `User-agent: ${bot}\nAllow: /\nAllow: /blog/\nAllow: /llms.txt\nDisallow: /auth/\n`,
+).join('\n')}
 `;
 
   fs.mkdirSync(path.dirname(ROBOTS_PATH), { recursive: true });
