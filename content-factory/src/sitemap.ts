@@ -23,6 +23,22 @@ function withTrailingSlash(url: string): string {
   return url.endsWith('/') ? url : `${url}/`;
 }
 
+/** Fail closed: any blog slug containing "fallback" is a thin duplicate and is not indexable. */
+export function isIndexableBlogSlug(slug: string): boolean {
+  const normalized = slug.trim().toLowerCase();
+  return normalized.length > 0 && !normalized.startsWith('_') && !normalized.includes('fallback');
+}
+
+export function isFallbackBlogLoc(loc: string): boolean {
+  const match = String(loc).match(/\/blog\/([^/?#]+)/i);
+  if (!match) return false;
+  try {
+    return decodeURIComponent(match[1]).toLowerCase().includes('fallback');
+  } catch {
+    return match[1].toLowerCase().includes('fallback');
+  }
+}
+
 function hreflang(url: string): SitemapEntry['xhtml:link'] {
   const loc = withTrailingSlash(url);
   return [
@@ -89,6 +105,7 @@ function readSitemap(): { urlset: { url: SitemapEntry[] } } {
 
 function writeSitemap(sitemap: { urlset: { url: SitemapEntry[] } }): void {
   const SITEMAP_PATH = getSitemapPath();
+  sitemap.urlset.url = sitemap.urlset.url.filter((entry) => !isFallbackBlogLoc(entry.loc));
   const builder = new XMLBuilder({
     ignoreAttributes: false,
     format: true,
@@ -112,11 +129,19 @@ export async function addArticleToSitemap(
   priority: 'high' | 'medium' | 'low' = 'medium',
 ): Promise<void> {
   const BASE_URL = getBaseUrl();
-  const newEntry = buildBlogEntry(slug, datePublished, priority);
   const sitemap = readSitemap();
   const loc = `${BASE_URL}/blog/${slug}/`;
 
-  sitemap.urlset.url = sitemap.urlset.url.filter((u) => u.loc !== loc);
+  sitemap.urlset.url = sitemap.urlset.url.filter((u) => u.loc !== loc && !isFallbackBlogLoc(u.loc));
+
+  if (!isIndexableBlogSlug(slug)) {
+    writeSitemap(sitemap);
+    writeLlmsTxt();
+    console.log(`ℹ️ Sitemap excluded non-indexable slug: /blog/${slug}/`);
+    return;
+  }
+
+  const newEntry = buildBlogEntry(slug, datePublished, priority);
   sitemap.urlset.url.push(newEntry);
   sitemap.urlset.url.sort((a, b) => parseFloat(b.priority) - parseFloat(a.priority));
 
@@ -129,7 +154,9 @@ export function regenerateSitemap(
   slugs: string[],
   defaultDate: string = new Date().toISOString().split('T')[0],
 ): void {
-  const blogEntries = slugs.map((slug) => buildBlogEntry(slug, defaultDate, 'medium'));
+  const blogEntries = slugs
+    .filter(isIndexableBlogSlug)
+    .map((slug) => buildBlogEntry(slug, defaultDate, 'medium'));
   const sitemap = {
     urlset: {
       url: [...staticEntries(defaultDate), ...blogEntries].sort(

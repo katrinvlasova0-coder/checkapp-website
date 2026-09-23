@@ -183,7 +183,6 @@ program
       .map((f) => f.replace('.mdx', ''));
 
     regenerateSitemap(slugs);
-    console.log(`✅ Sitemap rebuilt with ${slugs.length} entries`);
   });
 
 program

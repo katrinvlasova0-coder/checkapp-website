@@ -37,6 +37,18 @@ function isNonContentPath(urlPath) {
   return false;
 }
 
+/** Content-factory fallback copies are thin duplicates and must not be submitted. */
+function isFallbackBlogPath(urlPath) {
+  const path = String(urlPath || '');
+  const match = path.match(/\/blog\/([^/?#]+)/i);
+  if (!match) return false;
+  try {
+    return decodeURIComponent(match[1]).toLowerCase().includes('fallback');
+  } catch {
+    return match[1].toLowerCase().includes('fallback');
+  }
+}
+
 module.exports = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://checkapp.today',
   outDir: './out',
@@ -46,7 +58,7 @@ module.exports = {
   priority: 0.7,
   exclude: NON_CONTENT_PATTERNS,
   transform: async (config, urlPath) => {
-    if (isNonContentPath(urlPath)) return null;
+    if (isNonContentPath(urlPath) || isFallbackBlogPath(urlPath)) return null;
 
     return {
       loc: urlPath,
@@ -65,7 +77,7 @@ module.exports = {
 
     const slugs = fs
       .readdirSync(blogDir)
-      .filter((f) => f.endsWith('.mdx') && !f.startsWith('_'))
+      .filter((f) => f.endsWith('.mdx') && !f.startsWith('_') && !f.toLowerCase().includes('fallback'))
       .map((f) => f.replace(/\.mdx$/, ''));
 
     return slugs.map((slug) => ({

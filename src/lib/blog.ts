@@ -35,7 +35,14 @@ export type BlogPostMeta = {
   faq: BlogFaq[];
   sources: BlogSource[];
   checkedBy?: string;
+  /** True for content-factory fallback duplicates and explicit noindex frontmatter. */
+  noindex?: boolean;
 };
+
+/** Content-factory safe copies use slugs that contain `fallback`. They stay on disk but are not public. */
+export function isFallbackSlug(slug: string): boolean {
+  return slug.toLowerCase().includes('fallback');
+}
 
 export type BlogPost = BlogPostMeta & {
   content: string;
@@ -82,6 +89,13 @@ function parsePost(filename: string): BlogPost {
   const tags = (data.tags as string[] | undefined) ?? [];
   const category = (data.category ?? tags[0] ?? 'wellness') as string;
 
+  const robots = typeof data.robots === 'string' ? data.robots.toLowerCase() : '';
+  const noindex =
+    isFallbackSlug(slug) ||
+    data.noindex === true ||
+    data.noindex === 'true' ||
+    robots.includes('noindex');
+
   // Estimate readTime if not provided (avg 200 wpm)
   const readTime = (data.readTime as number | undefined) ?? Math.max(1, Math.ceil(content.trim().split(/\s+/).length / 200));
 
@@ -100,6 +114,7 @@ function parsePost(filename: string): BlogPost {
     faq: (data.faq as BlogFaq[]) ?? [],
     sources: (data.sources as BlogSource[]) ?? [],
     checkedBy: data.checkedBy as string | undefined,
+    noindex,
     content,
   };
 }
@@ -118,7 +133,7 @@ export function getAllPosts(): BlogPostMeta[] {
 
   return fs
     .readdirSync(BLOG_DIR)
-    .filter((f) => f.endsWith('.mdx') && !f.startsWith('_'))
+    .filter((f) => f.endsWith('.mdx') && !f.startsWith('_') && !isFallbackSlug(f.replace(/\.mdx$/, '')))
     .map((f) => {
       const { content, ...meta } = parsePost(f);
       void content;

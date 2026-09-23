@@ -201,6 +201,7 @@ category: ${yamlString(template.category)}
 readTime: "8 min"
 coverImage: ${yamlString(item.cover)}
 featured: false
+noindex: true
 tags: ${JSON.stringify([template.keywordEn, template.category, 'public procurement', '2026'])}
 tagsEn: ${JSON.stringify([template.keywordEn, template.category, 'public procurement', '2026'])}
 faq:
