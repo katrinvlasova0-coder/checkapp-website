@@ -4,6 +4,7 @@ import {
   buildSafeFallbackArticle,
   selectTemplate,
 } from './safe-fallback';
+import { isFallbackBlogLoc, isIndexableBlogSlug } from './sitemap';
 
 function assert(condition: boolean, message: string): void {
   if (!condition) {
@@ -30,6 +31,8 @@ for (const template of SAFE_TEMPLATES) {
   });
 
   assert(slug === `fallback-${template.id}-2026-08-18`, `unexpected slug ${slug}`);
+  assert(/^noindex:\s*true\s*$/m.test(content), `${slug} missing noindex frontmatter`);
+  assert(!isIndexableBlogSlug(slug), `${slug} must stay out of the sitemap`);
   assert(content.includes('general wellness information only'), `${slug} missing disclaimer`);
   assert(
     content.includes('Try CheckApp free') && content.includes('/download/'),
@@ -62,5 +65,15 @@ for (const template of SAFE_TEMPLATES) {
     `${slug} repeats cover image in the body`,
   );
 }
+
+assert(!isIndexableBlogSlug('fallback-hydration-signals-2026-09-21'), 'fallback prefix');
+assert(!isIndexableBlogSlug('notes-with-fallback-copy'), 'slug containing fallback');
+assert(isIndexableBlogSlug('how-to-tell-if-dehydrated'), 'real article slug');
+assert(
+  isFallbackBlogLoc('https://checkapp.today/blog/fallback-4p-prevention-2026-09-18/'),
+  'fallback loc',
+);
+assert(!isFallbackBlogLoc('https://checkapp.today/blog/4p-medicine-basics/'), 'real article loc');
+assert(!isFallbackBlogLoc('https://checkapp.today/features/'), 'static page loc');
 
 console.log('✅ safe-fallback.test.ts passed');

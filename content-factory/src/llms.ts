@@ -15,7 +15,8 @@ function getBaseUrl(): string {
 
 /** Dated safe-fallback copies are not canonical articles. */
 function isPublicArticle(slug: string): boolean {
-  return slug.length > 0 && !slug.startsWith('_') && !slug.startsWith('fallback-');
+  const normalized = slug.trim().toLowerCase();
+  return normalized.length > 0 && !normalized.startsWith('_') && !normalized.includes('fallback');
 }
 
 function listSlugs(explicit?: string[]): string[] {

@@ -37,7 +37,8 @@ export async function runIntegrationTests(options: {
     ? fs.readdirSync(contentDir).filter((f) => f.endsWith('.mdx')).map((f) => f.replace('.mdx', ''))
     : [];
   regenerateSitemap(slugs);
-  console.log(`✅ Sitemap: ${slugs.length} blog entries`);
+  const indexable = slugs.filter((slug) => !slug.toLowerCase().includes('fallback'));
+  console.log(`✅ Sitemap: ${indexable.length} indexable blog entries`);
 
   // 4. Validate existing article
   if (options.slug && fs.existsSync(path.join(contentDir, `${options.slug}.mdx`))) {

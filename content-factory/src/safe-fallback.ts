@@ -352,6 +352,7 @@ category: ${yamlString(template.category)}
 readTime: 8
 coverImage: ${yamlString(images[0].url)}
 featured: false
+noindex: true
 checkedBy: "Sam Okonkwo, Registered Dietitian"
 tags: ${JSON.stringify([template.keywordEn, template.category, 'wellness', '2026'])}
 faq:
@@ -468,6 +469,7 @@ export async function publishSafeFallback(options: {
     isFallback: true,
     fallbackReason: reason,
   });
+  // Fail closed for indexing: addArticleToSitemap refuses slugs that contain "fallback".
   await addArticleToSitemap(slug, date, 'medium');
 
   console.log(`✅ Safe fallback published: /blog/${slug}`);

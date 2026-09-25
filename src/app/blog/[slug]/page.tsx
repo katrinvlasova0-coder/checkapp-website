@@ -10,7 +10,13 @@ import { CtaBanner } from '@/components/marketing/CtaBanner';
 import { RelatedPosts } from '@/components/blog/RelatedPosts';
 import { FaqAccordion } from '@/components/ui/FaqAccordion';
 import { BlogInlineCta } from '@/components/blog/BlogInlineCta';
-import { getAllPostSlugs, getPostBySlug, getRelatedPosts, extractHeadings } from '@/lib/blog';
+import {
+  extractHeadings,
+  getAllPostSlugs,
+  getPostBySlug,
+  getRelatedPosts,
+  isFallbackSlug,
+} from '@/lib/blog';
 import { createMetadata, breadcrumbSchema, articleSchema, faqSchema } from '@/lib/seo';
 
 type PageProps = {
@@ -33,6 +39,7 @@ export async function generateMetadata({ params }: PageProps) {
     description: post.description,
     path: `/blog/${slug}`,
     ogImage: post.coverImage || undefined,
+    noindex: post.noindex === true || isFallbackSlug(slug),
   });
 }
 

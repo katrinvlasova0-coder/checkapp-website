@@ -6,33 +6,58 @@ type PageMeta = {
   description: string;
   path: string;
   ogImage?: string;
+  /** Thin or duplicate pages (content-factory fallbacks) must not be indexed. */
+  noindex?: boolean;
 };
+
+/**
+ * Join a site-relative path with the origin. Leave absolute http(s) URLs alone.
+ * Prefixing the origin onto `https://…` produces `https://checkapp.todayhttps//…`
+ * after the URL parser collapses the second scheme.
+ */
+export function absoluteAssetUrl(asset: string): string {
+  const trimmed = asset.trim();
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  const origin = SITE_URL.replace(/\/$/, '');
+  return `${origin}${trimmed.startsWith('/') ? trimmed : `/${trimmed}`}`;
+}
 
 export function createMetadata({
   title,
   description,
   path,
   ogImage = DEFAULT_OG_IMAGE,
+  noindex = false,
 }: PageMeta): Metadata {
-  const url = `${SITE_URL}${path}`;
+  const url = absoluteAssetUrl(path);
+  const image = absoluteAssetUrl(ogImage);
 
   return {
     title,
     description,
     alternates: { canonical: url },
+    ...(noindex
+      ? {
+          robots: {
+            index: false,
+            follow: true,
+            googleBot: { index: false, follow: true },
+          },
+        }
+      : {}),
     openGraph: {
       title,
       description,
       url,
       siteName: SITE_NAME,
       type: 'website',
-      images: [{ url: `${SITE_URL}${ogImage}`, width: 1200, height: 630, alt: title }],
+      images: [{ url: image, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${SITE_URL}${ogImage}`],
+      images: [image],
     },
   };
 }
